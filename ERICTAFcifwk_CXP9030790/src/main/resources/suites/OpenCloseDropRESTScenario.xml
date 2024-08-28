@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CIFWKPortalTest" parallel="false">
+    <test name="OpenCloseDropRESTCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+                <methods>
+                    <include name="openCloseDropRESTScenario" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

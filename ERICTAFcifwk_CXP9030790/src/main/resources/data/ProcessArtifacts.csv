@@ -1,0 +1,5 @@
+id,description,host,wgetNoCheck,groupId,artifactName,m2Type,version,command,catOutput,args,expectedOut,expectedErr,expectedExit,timeout
+CIP-4597_Func_2,Test Artifact Version Does not Exist in CIFWK DB,ciportal,wget.nocheck,com.ericsson.oss.pmic,pm-service,jar,1.0.999,curlNoneSecure,cat.catOutput,,ArtifactVersion matching query does not exist,,0,10000
+CIP-4597_Func_3,Test Artifact  Does not Exist in CIFWK DB,ciportal,wget.nocheck,com.ericsson.oss.pmic,pm-service-event-model-none,jar,1.0.999,curlNoneSecure,cat.catOutput,,Artifact matching query does not exist,,0,10000
+CIP-4597_Func_4,Test Artifact  Does  Exist in CIFWK DB,ciportal,wget.nocheck,com.ericsson.oss.pmic,pm-service-api,jar,1.0.87,curlNoneSecure,cat.catOutput,,Successfully Updated,,0,10000
+CIP-4597_Func_5,Test Artifact  Does  Exist in CIFWK DB and update Build Flag,ciportal,wget.nocheck,com.ericsson.oss.pmic,ERICpmic_CXP9030369,rpm,1.0.87,curlNoneSecure,cat.catOutput,,Updated Artifact Mapping Table with Build Flag,,0,10000

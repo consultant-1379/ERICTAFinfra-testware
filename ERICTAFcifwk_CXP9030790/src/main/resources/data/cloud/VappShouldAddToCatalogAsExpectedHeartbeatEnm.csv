@@ -1,0 +1,2 @@
+localFile,remoteLocation,vappName,datacenterName1,catalogName,vappTemplateName,httpResponseDatacenter,expectedDatacenter,httpResponseVapp,expectedVapp,httpResponseAdd,expectedAdd,timeoutAdd,httpResponseVappTemplates,expectedVappTemplates,expectedVappTemplateStatus,expectedvAppBecameBusy,expectedVappName,expectedHttpStatusSync,expectedvAppPowerStatus,datacenterName2,cloudRestTimeout
+,,heartbeat_enm_test_create,CI-TE-Development,CI-TE-Development,heartbeat_enm_test_add,OK,OrgVdc,OK,vapps,OK,vapp_template_id,780,OK,vapptemplates,RESOLVED,TRUE,,,,,5

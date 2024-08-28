@@ -1,0 +1,2 @@
+VappTemplateName,CatalogName,VappName,DatacenterName,PowerOn,LinkedClone,expectedvAppPowerStatus,ExpectedRemoval,ExpectedHttpStatus,CreationTimeout,cloudRestTimeout,DeleteTimeout,vcliCommandsEnabled,expectedHttpSecurityPolicySet,securityPolicyTimeout,expectedSecurityPolicySetVms,expectedCreateHttpStatus,expectedvAppBecameBusy,vappWillCreate,vappForPoweroffAndDelete,MakeVappBusy
+mt_js,Master-Templates,heartbeat_small_test_create,CI-AXIS,yes,TRUE,POWERED_ON,Vapp has been deleted,OK,1200,5,660,TRUE,OK,200,,OK,TRUE,TRUE,FALSE,FALSE

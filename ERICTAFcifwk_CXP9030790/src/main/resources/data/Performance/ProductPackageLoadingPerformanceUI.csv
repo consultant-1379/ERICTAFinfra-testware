@@ -1,0 +1,5 @@
+id,description,host,directory,product,timeoutInMillis,expected
+CIP-6341_Func_3.1,Verify Product Package page load and refresh times are as expected - TOR Package Page,ciportal,/TOR/packages,TOR,40000,Product Package Page Loaded
+CIP-6341_Func_3.2,Verify Product Package page load and refresh times are as expected - OSS-RC Package Page,ciportal,/OSS-RC/packages,OSS-RC,40000,Product Package Page Loaded
+CIP-6341_Func_3.3,Verify Product Package page load and refresh times are as expected - LITP Package Page,ciportal,/LITP/packages,LITP,40000,Product Package Page Loaded
+CIP-6341_Func_3.4,Verify Product Package page load and refresh times are as expected - CSL-Mediation Package Page,ciportal,/CSL-Mediation/packages,CSL-Mediation,40000,Product Package Page Loaded

@@ -1,0 +1,47 @@
+id,description,baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+CIP-8215_Func_1,importComponents,ciportal,/CI/importComponents/,"componentResult={'parent':'CI-Line','child':'CI-Axis','artifacts':['ERICalpha_CXP9030450','ERICcifwkportal_CXP9030099']}",POST,OK,Data Successfully Loaded into the CI DB,TRUE
+CIP-8215_Func_2,packagesInComponent,ciportal,/packagesInComponent/,"product=CI,parentValue=CI-Line,childValue=CI-Axis",GET,OK,ERICcifwkportal_CXP9030099,TRUE
+CIP-8215_Func_3,packagesInComponent,ciportal,/packagesInComponent/,"product=CI,parentValue=CI-Line,childValue=CI-Axis",GET,OK,ERICalpha_CXP9030450,TRUE
+CIP-8215_Func_4,removeComponents,ciportal,/CI/removeComponents/,"componentResult={'parent':'CI-Line','child':'CI-Axis','artifacts':['ERICalpha_CXP9030450']}",POST,OK,Data Successfully Removed from the CI DB,TRUE
+CIP-8215_Func_5,packagesInComponent,ciportal,/packagesInComponent/,"product=CI,parentValue=CI-Line,childValue=CI-Axis",GET,OK,ERICcifwkportal_CXP9030099,TRUE
+CIP-4771_Func_13,,ciportal,test/1.0.1/media/,,GET,OK,1.0.1,TRUE
+CIP-4771_Func_14,,ciportal,createISOcontentOnly/,product=test&release=testrelname&drop=1.0.1&platform=none,POST,OK,1.0.1,TRUE
+CIP-4771_Func_15,,ciportal,createISOcontentOnly/,product=test&release=testrelname&drop=1.0.2&platform=none,POST,OK,1.0.2,TRUE
+CIP-4771_Func_16,,ciportal,test/1.0.1/media/,,GET,OK,1.0.1,TRUE
+CIP-4771_Func_17,,ciportal,test/1.0.2/media/,,GET,OK,1.0.2,TRUE
+CIP-5011_Func_1,Media Delivery To Drop -Success,ciportal,mediaDeliveryToDrop/,product=test&drop=1.0.2&mediaArtifact=testma&version=1.0.1&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Sucessfully Delivered,TRUE
+CIP-5011_Func_1.1,Media Delivery To Drop -Success,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&version=1.0.2&productSet=psTest&productSetRelease=pstestrelname&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Sucessfully Delivered,TRUE
+CIP-5011_Func_1.2,Media Delivery To Drop - Error: Media Artifact required,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&version=3.11.20&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Media Artifact required,TRUE
+CIP-5011_Func_1.3,Media Delivery To Drop - Error: version required,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: version required,TRUE
+CIP-5011_Func_1.4,Media Delivery To Drop - Error: Product required,ciportal,mediaDeliveryToDrop/,drop=latest&mediaArtifact=testma&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Product required,TRUE
+CIP-5011_Func_1.5,Media Delivery To Drop - Error: Signum required,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&version=1.0.2&productSet=psTest&email=tafTest@ericsson.com,POST,OK,Error: Signum required,TRUE
+CIP-5011_Func_1.6,Media Delivery To Drop - Error: Product Set required,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&version=1.0.2&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Product Set required,TRUE
+CIP-5011_Func_1.7,Media Delivery To Drop - Error: Product Set,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&version=1.0.2&productSet=psTestg&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Product Set,TRUE
+CIP-5011_Func_1.8,Media Delivery To Drop - Error: Product Set,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&version=1.0.2&productSet=psTest&productSetRelease=fxdfsa&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Product Set,TRUE
+CIP-5011_Func_1.9,Media Delivery To Drop - Error: Media Artifact ,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=ERICtor_gkhjk&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Media Artifact,TRUE
+CIP-5011_Func_1.10,Media Delivery To Drop - Error: Media Artifact ,ciportal,mediaDeliveryToDrop/,product=test&drop=latest&mediaArtifact=testma&version=3.gsdf&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error: Media Artifact,TRUE
+CIP-5011_Func_2,Obsolete Media - Error:,ciportal,obsoleteMediaCIFWK/,drop=1.1.2&mediaArtifact=testma&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com&reason=Testing,POST,OK,Error:,TRUE
+CIP-5011_Func_2.1,Obsolete Media - Error,ciportal,obsoleteMediaCIFWK/,drop=1.0.2&mediaArtifact=testma&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com&reason=Testing,POST,OK,Error:,TRUE
+CIP-5011_Func_2.2,Obsolete Media - Error,ciportal,obsoleteMediaCIFWK/,drop=1.0.2&mediaArtifact=testma&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com,POST,OK,Error:,TRUE
+CIP-5011_Func_2.3,Obsolete Media - Error,ciportal,obsoleteMediaCIFWK/,drop=1.0.2&mediaArtifact=testma&version=1.0.2&productSet=psTestg&signum=tafTest&email=tafTest@ericsson.com&reason=Testing,POST,OK,Error:,TRUE
+CIP-5011_Func_2.4,Obsolete Media - Error,ciportal,obsoleteMediaCIFWK/,drop=1.0.2&mediaArtifact=ERICtor_CXP90&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com&reason=Testing,POST,OK,Error:,TRUE
+CIP-5011_Func_2.5,Obsolete Media - Error: email required,ciportal,/obsoleteMediaCIFWK/,drop=1.0.2&mediaArtifact=ERICtor_CXP90&version=1.0.2&productSet=psTest&signum=tafTest&reason=Testing,POST,OK,Error:,TRUE
+CIP-5011_Func_2.6,Obsolete Media From a Drop,ciportal,obsoleteMediaCIFWK/,drop=1.0.4&mediaArtifact=testma&version=1.0.2&productSet=psTest&signum=tafTest&email=tafTest@ericsson.com&reason=Testing,POST,OK,Obsoleted,TRUE
+,,ciportal,psTest/dropMedia/1.0.2/createversion/,,POST,OK,2.0.1,TRUE
+,,ciportal,psTest/dropMedia/1.0.2/createversion/,,POST,OK,2.0.1,TRUE
+,,ciportal,getMediaArtifactVersions/,"product=test,drop=1.0.1",GET,OK,<version>1.0.2</version>,TRUE
+,,ciportal,getMediaArtifactNumber/,"product=test,drop=1.0.1",GET,OK,<cxp>testma</cxp>,TRUE
+,,ciportal,getMediaArtifactGroup/,"product=test,drop=1.0.1",GET,OK,<group>com.a.b.c</group>,TRUE
+,,ciportal,getProductSetNumber/,"drop=1.0.2,productSet=psTest",GET,OK,<productSetNumber>AOM124521</productSetNumber>,TRUE
+,,ciportal,getProductSetVersions/,"drop=1.0.2,productSet=psTest",GET,OK,<version>2.0.1</version>,TRUE
+,,ciportal,getLastGoodProductSetVersion/,"drop=1.0.2,productSet=psTest",GET,OK,None,TRUE
+,,ciportal,getProductSetVersionContents/,"drop=1.0.2,version=2.0.1,productSet=psTest",GET,OK,cxp111222,TRUE
+CIP-6543_Func_1,,ciportal,checkForChanges/,"product=test,release=testrelname,drop=1.0.1",GET,OK,false,TRUE
+CIP-6543_Func_2,,ciportal,checkForChanges/,"product=test,release=testrelname,drop=1.0.2",GET,OK,false,TRUE
+CIP-6543_Func_1a,,ciportal,checkForChanges/,"product=test,release=testrelname,drop=1.0.3",GET,OK,true,TRUE
+CIP-6543_Func_2a,,ciportal,checkForChanges/,"product=test,release=testrelname,drop=1.0.4",GET,OK,true,TRUE
+CIP-6543_Func_3,,ciportal,checkForChanges/,"product=test,release=testrelname,drop=9.9.9",GET,OK,ERROR: cannot check for changes to the ISO: Drop matching query does not exist.,TRUE
+CIP-6543_Func_4,,ciportal,checkForChanges/,"product=test,release=dummyreleasename,drop=1.0.1",GET,OK,ERROR: cannot check for changes to the ISO: Drop matching query does not exist.,TRUE
+
+
+

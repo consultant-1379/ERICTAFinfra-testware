@@ -1,0 +1,6 @@
+id,description,hostname,username,password,url,rStateURL,product,numberAttribute,versionAttribute,drop,media,expected,restTimeout,write,missing
+_Func_3,Checking That CXPnumber is not there,ciportal,axisadm,axis321,/primOptions,/getRStateFromVersion/,test,CXP2,version2,1.0.1,1.0.1,No Change,40000,,
+_Func_4,Checking Results were returned,ciportal,axisadm,axis321,/primOptions,/getRStateFromVersion/,test,CXP1,version1,1.0.1,1.0.1,,40000,,
+_Func_5,New Rstate Found,ciportal,axisadm,axis321,/primOptions,/getRStateFromVersion/,test,CXP1,version1,1.0.1,1.0.1,CXP1,40000,,
+_Func_6,Write To Prim - Successful,ciportal,axisadm,axis321,/primOptions,/getRStateFromVersion/,test,CXP1,version1,1.0.1,1.0.1,Successful,40000,yes,
+_Func_8,Checking Results Missing Number,ciportal,axisadm,axis321,/primOptions,/getRStateFromVersion/,test,CXP3,version3,1.0.1,1.0.1,CXP3,40000,,yes

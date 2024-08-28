@@ -1,0 +1,2 @@
+hostname,localPom,command,args,remotePath,remotePom,expectedOut,timeout
+ciportal,BuildPomFiles/isoBuild.pom,mvn,test -f,/tmp/testiso/,pom.xml,BUILD SUCCESS,3

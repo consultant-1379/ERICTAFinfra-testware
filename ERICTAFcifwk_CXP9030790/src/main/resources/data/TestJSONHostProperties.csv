@@ -1,0 +1,16 @@
+Id,Description,HostName,GetDropBaseURL,RestGetParameters,IsValidJSON,ExpectedOutput
+CIP-6359_Func_1.1,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,clusterId=73,TRUE,hostname
+CIP-6359_Func_1.2,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,pretty=true",TRUE,hostname
+CIP-6359_Func_1.3,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,tunnel=true",TRUE,tunnel
+CIP-6359_Func_1.4,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,tunnel=true,pretty=true",TRUE,tunnel
+CIP-6359_Func_1.5,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,clusterId=82,TRUE,hostname
+CIP-6359_Func_1.6,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=82,pretty=true",TRUE,hostname
+CIP-6359_Func_1.7,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=82,tunnel=true,pretty=true",TRUE,tunnel
+CIP-6359_Func_1.8,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=82,tunnel=true",TRUE,hostname
+CIP-6359_Func_1.9,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,citeHostPropertiesFile=/export/scripts/CLOUD/configs/templates/oss_box_dm/variables_sfs.txt",TRUE,omsas
+CIP-6359_Func_1.10,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,pretty=true,citeHostPropertiesFile=/export/scripts/CLOUD/configs/templates/oss_box_dm/variables_sfs.txt",TRUE,omsas
+CIP-6359_Func_1.11,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,tunnel=true,citeHostPropertiesFile=/export/scripts/CLOUD/configs/templates/oss_box_dm/variables_sfs.txt",TRUE,omsas
+CIP-6359_Func_1.12,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,tunnel=true,pretty=true,citeHostPropertiesFile=/export/scripts/CLOUD/configs/templates/oss_box_dm/variables_sfs.txt",TRUE,omsas
+CIP-6359_Func_1.13,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,clusterId=abc,FALSE,Error:
+CIP-6359_Func_1.14,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,clusterId=1001,FALSE,Error:
+CIP-6359_Func_1.15,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,"clusterId=73,citeHostPropertiesFile=file/doesn’t/exist.txt",FALSE,Error:

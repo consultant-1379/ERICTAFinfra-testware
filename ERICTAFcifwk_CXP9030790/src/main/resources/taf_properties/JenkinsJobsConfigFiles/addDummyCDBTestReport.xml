@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.ericsson.duraci.messaging.ImplicitEiffelConfigurationNotificationMessagingJobProperty plugin="eiffel-core@9.0.13">
+      <messagingEnabled>false</messagingEnabled>
+    </com.ericsson.duraci.messaging.ImplicitEiffelConfigurationNotificationMessagingJobProperty>
+    <com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty plugin="eiffel-core@9.0.13">
+      <messagingEnabled>false</messagingEnabled>
+      <jobFinishedDisabled>false</jobFinishedDisabled>
+    </com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>RESULT</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GROUP_ID</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>ARTIFACT_ID</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>VERSION</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>mkdir -p target/report
+echo &quot;&lt;div id=&apos;Hello&apos;&gt;HELLO WORLD&lt;/div&gt;&quot; &gt; target/report/index.html
+echo ${RESULT}
+echo http://192.168.0.108:8080/jenkins/job/${JOB_NAME}/configure</command>
+    </hudson.tasks.Shell>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep plugin="eiffel-core@9.0.13">
+      <gav>
+        <groupId>${GROUP_ID}</groupId>
+        <artifactId>${ARTIFACT_ID}</artifactId>
+        <version>${VERSION}</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>CDB_Physical_STARTED</string>
+            <string>SUCCESS</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep>
+  </builders>
+  <publishers>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatcher plugin="eiffel-core@9.0.13">
+      <gav>
+        <groupId>${GROUP_ID}</groupId>
+        <artifactId>${ARTIFACT_ID}</artifactId>
+        <version>${VERSION}</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>CDB_Physical_COMPLETED</string>
+            <string>${RESULT}</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+      <optionalParameters>
+        <list>
+          <com.ericsson.duraci.messaging.events.params.OptionalParameter>
+            <key>testware</key>
+            <value>ERICTAFcloud_CXP9030605-VER-1.0.10</value>
+          </com.ericsson.duraci.messaging.events.params.OptionalParameter>
+          <com.ericsson.duraci.messaging.events.params.OptionalParameter>
+            <key>TestReportDirectory</key>
+            <value>http://192.168.0.108:8080/jenkins/job/${JOB_NAME}/ws/target/report/*zip*/report.zip</value>
+          </com.ericsson.duraci.messaging.events.params.OptionalParameter>
+        </list>
+      </optionalParameters>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatcher>
+  </publishers>
+  <buildWrappers/>
+</project>

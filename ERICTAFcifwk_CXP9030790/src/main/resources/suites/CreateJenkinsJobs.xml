@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CreateJenkinsJobs">
+	<test name="CreateJenkinsJobs" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.cifwk.rest.test.cases.TestJenkinsJobCIFlow">
+				<methods>
+					<include name="testCreateJenkinsJobs" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

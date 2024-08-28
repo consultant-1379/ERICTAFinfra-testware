@@ -1,0 +1,12 @@
+VappTemplateName,CatalogName,VappName,DatacenterName,Vms,Timeout,CloudRestTimeout,ExpectedHttpStatus,ExpectedHttpStatusRecompose,ExpectedOut,Expected,ExpectedvAppBecameBusy,ExpectedvAppPowerStatus,ExpectedInList,MakeVappBusy,useNewQuotaSystem,runningVappsQuota,runningCpusQuota,runningMemoryQuota,totalVappsQuota
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive,Axis_OrgDC1,"master_sc-1,master_sc-2",4000,50,OK,OK,recomposed,TRUE,TRUE,POWERED_ON,FALSE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive,Axis_OrgDC1,"master_sc-1,master_sc-2",4000,50,OK,OK,recomposed,TRUE,TRUE,POWERED_ON,FALSE,FALSE,TRUE,100,100,1000000,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive,Axis_OrgDC1,"master_ms-1,master_sfs",4000,50,OK,BAD_REQUEST,issue,TRUE,TRUE,POWERED_ON,TRUE,TRUE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive,Axis_OrgDC1,"master_sc-1,master_gateway",4000,50,OK,BAD_REQUEST,gateway,TRUE,FALSE,POWERED_ON,TRUE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive,Axis_OrgDC1,"master_sc-1,master",4000,50,OK,BAD_REQUEST,issue,TRUE,FALSE,POWERED_ON,TRUE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive,Axis_OrgDC1,NULL,4000,50,OK,BAD_REQUEST,issue,TRUE,FALSE,POWERED_ON,TRUE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive_off,Axis_OrgDC1,"master_sc-1,master_sc-2",4000,50,OK,OK,recomposed,TRUE,TRUE,POWERED_OFF,FALSE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive_off,Axis_OrgDC1,"master_ms-1,master_sfs",4000,50,OK,BAD_REQUEST,issue,TRUE,TRUE,POWERED_OFF,TRUE,TRUE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive_off,Axis_OrgDC1,"master_sc-1,master_gateway",4000,50,OK,BAD_REQUEST,gateway,TRUE,FALSE,POWERED_OFF,TRUE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive_off,Axis_OrgDC1,"master_sc-1,master",4000,50,OK,BAD_REQUEST,issue,TRUE,FALSE,POWERED_OFF,TRUE,FALSE,FALSE,100,0,0,100
+testware_vapp_DONOTDELETE,Axis_Catalog1,spp_tc_positive_off,Axis_OrgDC1,NULL,4000,50,OK,BAD_REQUEST,issue,TRUE,FALSE,POWERED_OFF,TRUE,FALSE,FALSE,100,0,0,100

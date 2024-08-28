@@ -1,0 +1,6 @@
+hostname,command,args,expectedExitCode,timeout
+ciportal,sudoumount,/mnt/testIso,0,3
+ciportal,sudorecursively.delete,/mnt/testIso,0,3
+ciportal,sudomake.dir.p,/mnt/testIso,0,3
+ciportal,sudomount,/tmp/testiso/target/testwarema-1.0.3.iso  /mnt/testIso,0,3
+ciportal,find,/mnt/testIso,0,3

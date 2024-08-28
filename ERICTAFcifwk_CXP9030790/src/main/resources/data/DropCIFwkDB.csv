@@ -1,0 +1,2 @@
+host,deleteDB,expectedExit,timeout
+ciportal,mysql,0,30000

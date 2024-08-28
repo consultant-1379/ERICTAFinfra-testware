@@ -1,0 +1,2 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsJobName,jenkinsJobConfigurationFile,Expected
+jenkins1,jenkins,testJenkinsJob1,JenkinsJobsConfigFiles/config.xml,BAD_REQUEST

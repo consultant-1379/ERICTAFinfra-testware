@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CloudHeartBeat">
+    <test name="CloudHeartBeat" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.CloudPortal">
+                <methods>
+                    <include name="isTheCloudAlive" />
+                    <include name="verifyvAppCreation" />
+                    <include name="vappShouldStopAsExpected" />
+                    <include name="vappShouldAddToCatalogAsExpected" />
+                    <include name="verifyvAppRemoval" />
+                    <include name="vappTemplateShouldDeleteAsExpected" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

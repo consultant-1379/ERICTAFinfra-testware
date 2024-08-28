@@ -1,0 +1,52 @@
+[CIFWK]
+upgrade_email   = lciadm100@localhost
+cifwkdb         = cireports
+debug           = 1
+server_email    = lciadm100@localhost
+admins          = ( ('lciadm100', 'lciadm100@localhost'), )
+dbHost          = localhost
+deliveryEmail   = [ 'lciadm100@localhost' , 'lciadm100@localhost' ]
+testServer = 1
+
+[LDAP]
+password = Ericsson123
+bind_dn = uid=lciadm100,ou=Users,ou=Internal,o=ericsson
+
+[DMT]
+vcloud_pass = ciuser01
+vcloud_user = ciuser@CI1
+vcloud_host = atvcd1.athtem.eei.ericsson.se
+
+[DMT]
+vcloud_pass = ciuser01
+vcloud_host = atvcd1.athtem.eei.ericsson.se
+
+[DMT_SSHTunnel]
+sshtunnelPassword = shroot
+
+[DMT_SFTP]
+sftpPassword = 12shroot
+sftpSCPLpassword = cobbler
+[MESSAGE_BUS]
+hostname        = 192.168.0.99
+exchangeName    = vm
+bindingKeys     = ['#']
+
+[DELIVERY_EMAIL_LIST]
+ENM-IP = ['_USER_EMAIL_']
+TOR     = ['_USER_EMAIL_']
+SON-PM  = ['_USER_EMAIL_']
+SON-VIS = ['_USER_EMAIL_']
+OSS-RC  = ['_USER_EMAIL_']
+LITP    = ['_USER_EMAIL_']
+ASSURE  = ['_USER_EMAIL_']
+CI  = ['_USER_EMAIL_']
+STANDALONE-EBS-NBI=['_USER_EMAIL_']
+ENIQ-STATS=['_USER_EMAIL_']
+CSL-MEDIATION=['_USER_EMAIL_']
+COMINF = ['_USER_EMAIL_']
+SECURITY = ['_USER_EMAIL_']
+OM = ['_USER_EMAIL_']
+SOLARIS = ['_USER_EMAIL_']
+JIRA_ADMINS = ['_USER_EMAIL_']
+TEST = ['_USER_EMAIL_']

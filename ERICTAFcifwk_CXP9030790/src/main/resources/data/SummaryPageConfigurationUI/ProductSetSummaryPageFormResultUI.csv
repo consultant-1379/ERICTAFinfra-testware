@@ -1,0 +1,2 @@
+id,description,url,productSet,relDropOne,numberOne,relDropTwo,numberTwo,relDropThree,numberThree,relDropFour,numberFour,defaultDrop,action,timeoutInMillis,expected,header
+CIP-6328_Func_4.2,Testing that Selected drop are displaying  - Product Set  - OSS-RC - cancel,/ps,OSS-RC,,,,,,,,,,cancel,60000,Product Release Summary,productSet_OSS-RC_header

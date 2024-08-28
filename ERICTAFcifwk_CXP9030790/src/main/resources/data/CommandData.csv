@@ -1,0 +1,7 @@
+command,args,expectedOut,expectedErr,expectedExit,timeout
+list.dir,/home/lciadm100,test.py,,0,10000
+print.working.dir,  ,/home/lciadm100,,0,10000
+whoami,  ,lciadm100,,0,10000
+tail,test.py,name = raw_input('Enter your name:\n'),,0,10000
+echo,hello,hello,,0,10000
+curl,https://cifwk-oss.lmera.ericsson.se/getver/,1.4.34,,0,10000

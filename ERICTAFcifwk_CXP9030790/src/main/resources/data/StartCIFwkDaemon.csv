@@ -1,0 +1,2 @@
+host,startHttpDaemon,expectedExit,timeout
+ciportal,start.http,0,300000

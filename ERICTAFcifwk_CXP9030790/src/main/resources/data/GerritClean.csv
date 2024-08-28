@@ -1,0 +1,3 @@
+host,cleanDirectory,assertValue,exitCode,timeout
+gerritLocal,/export/data/gerrit/git/OSS/com.ericsson.td/ERICgamma.git,true,0,30
+gerritLocal,/export/data/gerrit/git/OSS/com.ericsson.td/ERICalpha.git,true,0,30

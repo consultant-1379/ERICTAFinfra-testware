@@ -1,0 +1,10 @@
+Id,Description,Host,Url,RA,DataCenter,StartDateTime,EndDateTime,EventType,Expected,TimeOut,Type
+CIP-6201_Func_3,Valid RA - CI,ciportal,/metrics/CloudMetrics,CI,,,,,true,3000,ra
+CIP-6201_Func_4,Valid DataCenter - CI-TE-Development,ciportal,/metrics/CloudMetrics,CI,CI-TE-Development,,,,true,3000,dataC
+CIP-6201_Func_5,Valid EventType- Start Vapp,ciportal,/metrics/CloudMetrics,CI,CI-TE-Development,,,start_vapp,true,3000,event
+CIP-6201_Func_6,Valid Start Date - Start Date,ciportal,/metrics/CloudMetrics,CI,CI-TE-Development,2014-09-15 12:00,,start_vapp,true,3000,start
+CIP-6201_Func_7,Valid End Date - End Date,ciportal,/metrics/CloudMetrics,CI,CI-TE-Development,2014-09-15 12:00,2014-09-17 12:00,start_vapp,true,3000,end
+CIP-6201_Func_8,Valid Submit - for specific fields,ciportal,/metrics/CloudMetrics,CI,CI-TE-Development,2014-09-15 12:00,2014-09-17 12:00,start_vapp,true,3000,submit
+CIP-6201_Func_9,Valid Submit - All RA's,ciportal,/metrics/CloudMetrics,ALL,CI-TE-Development,2014-09-15 12:00,2014-09-17 12:00,start_vapp,true,3000,submit
+CIP-6201_Func_10,Valid Submit- All RA's & Data Centers,ciportal,/metrics/CloudMetrics,ALL,ALL,2014-09-15 12:00,2014-09-17 12:00,start_vapp,true,3000,submit
+CIP-6201_Func_11,Valid Submit - All(Everything),ciportal,/metrics/CloudMetrics,ALL,ALL,2014-09-15 12:00,2014-09-17 12:00,ALL,true,3000,submit

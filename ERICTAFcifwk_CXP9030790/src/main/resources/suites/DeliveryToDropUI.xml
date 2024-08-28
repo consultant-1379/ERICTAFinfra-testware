@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DeliveryTests_Functional">
+  <test name="DeliveryTests_Functional">
+    <classes>
+       <class name="com.ericsson.cifwk.ui.test.cases.DeliveryPackageToDropUI" />
+       <class name="com.ericsson.cifwk.ui.test.cases.DeliveryMediaArtifactToDropUI" />
+    </classes>
+  </test>
+</suite>

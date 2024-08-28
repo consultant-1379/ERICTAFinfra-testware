@@ -1,0 +1,5 @@
+localHealthCheckFile,remoteHealthCheckFileLocation,jenkinsHostName,jenkinsBaseDirectory,jenkinsSlaveLabel,jenkinsRestTimeout,slaveOnlineTimeout,expectedSlavesOnline
+healthcheck_pass.sh,/opt/bitnami/apache2/htdocs/app/webroot/js/Vapp-Plugin-HealthCheck-Test_healthcheck.sh,jenkinsM1,jenkins,Vapp-Plugin-HealthCheck-Test,5,10000,true
+healthcheck_fail.sh,/opt/bitnami/apache2/htdocs/app/webroot/js/Vapp-Plugin-HealthCheck-Test_healthcheck.sh,jenkinsM1,jenkins,Vapp-Plugin-HealthCheck-Test,5,10000,false
+healthcheck_timeout.sh,/opt/bitnami/apache2/htdocs/app/webroot/js/Vapp-Plugin-HealthCheck-Test_healthcheck.sh,jenkinsM1,jenkins,Vapp-Plugin-HealthCheck-Test,5,10000,false
+,/opt/bitnami/apache2/htdocs/app/webroot/js/Vapp-Plugin-HealthCheck-Test_healthcheck.sh,jenkinsM1,jenkins,Vapp-Plugin-HealthCheck-Test,5,10000,false

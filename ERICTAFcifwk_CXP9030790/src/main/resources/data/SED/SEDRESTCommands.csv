@@ -1,0 +1,5 @@
+id,description,HostName,Directory,Parameters,Expected
+CIP-6137_Func_1,Test SED Generation using REST giving cluster ID and drop as parameters,ciportal,"/dmt/generateSED/","clusterId=82,drop=1.2.3",OK
+CIP-6137_Func_2,Test SED Generation using REST giving unknown cluster ID and drop as parameters,ciportal,"/dmt/generateSED/","clusterId=5000,drop=1.2.3",OK
+CIP-6137_Func_3,Test SED Generation using REST giving cluster ID drop and version as parameters,ciportal,"/dmt/generateSED/","clusterId=82,version=99.99.99,drop=1.2.3",OK
+CIP-6137_Func_4,Test SED Generation using REST giving cluster ID drop and unknown version as parameters,ciportal,"/dmt/generateSED/","clusterId=82,version=999.999.999,drop=1.2.3",OK

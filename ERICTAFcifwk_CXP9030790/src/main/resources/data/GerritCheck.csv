@@ -1,0 +1,2 @@
+host,serverName,assertValue,exitCode,timeout
+jenkinsM1,gerrit.ericsson.se,true,0,30

@@ -1,0 +1,7 @@
+hostname,path,parameters,timeout,httpStatus
+ciportal,createRepo/,product=test,30,ERROR
+ciportal,createRepo/,drop=1.0.5,30,ERROR
+ciportal,createRepo/,drop=1.7.2222&product=test,30,Issue
+ciportal,createRepo/,drop=1.0.5&product=test5555,30,Issue
+ciportal,createRepo/,drop=1.0.5&product=test&addArtifacts=ERICgamma_CXP11111452::1.0.23,30,ERROR
+ciportal,createRepo/,drop=1.0.5&product=test&addArtifacts=ERICgamma_CXP9030452::1.0.000,30,ERROR

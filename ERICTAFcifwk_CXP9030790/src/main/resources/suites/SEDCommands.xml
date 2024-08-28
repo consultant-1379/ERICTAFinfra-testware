@@ -1,0 +1,14 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SEDCommands">
+    <test name="SEDCommands" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.TestSEDCommands">
+                <methods>
+                    <include name="verifySEDCLIFunctionality" />
+                    <include name="verifySEDRESTFunctionality" />                  
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

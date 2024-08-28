@@ -1,0 +1,2 @@
+host,simpleCommand,expectedExit,timeout
+ciportal,list.dir,0,300000

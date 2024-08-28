@@ -1,0 +1,3 @@
+datacenterName,httpResponseDatacenter,expectedDatacenter,timeoutDatacenter,httpResponseVapps,expectedVapps,timeoutVapps
+CI-Execution-OSSRC,OK,OrgVdc,5,OK,vapps,5
+OSSRC-CI-CDB-UG,OK,OrgVdc,5,OK,vapps,5

@@ -1,0 +1,2 @@
+host,downloadLoc,artifactId,command2,args2,command3,stdOut,unZip,list,createSymlink,expectedExit,timeout
+ciportal,/var/tmp/,ERICcifwkportal_CXP9030099,change.dir,/proj/lciadm100/cifwk,print.working.dir,/proj/lciadm100/cifwk,unzip.file,list.dir,create.symlink,0,30000

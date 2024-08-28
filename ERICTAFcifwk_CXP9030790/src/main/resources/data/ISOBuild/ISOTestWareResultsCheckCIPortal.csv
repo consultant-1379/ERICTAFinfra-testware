@@ -1,0 +1,5 @@
+hostname,command,args,expectedOutput,expected,timeout
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testwarema/1.0.3/,ERICTAFtestware1_CXP0000018-1.0.1.jar,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testwarema/1.0.3/,ERICTAFtestware2_CXP0000019-1.0.1.jar,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testwarema/1.0.3/,ERICTAFtestware3_CXP0000020-1.0.1.jar,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testwarema/1.0.3/,ERICTAFtestware4_CXP0000021-1.0.1.jar,TRUE,3

@@ -1,0 +1,68 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestReportLinks" parallel="false">
+    <test name="DeleteCiFwkSuite" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.install.test.cases.DropCIFwkDB" />
+            <class
+                name="com.ericsson.cifwk.install.test.cases.CleanUpCIFwkDir" />
+        </classes>
+    </test>
+    <test name="InstallCiFwkSuite" preserve-order="true">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.install.test.cases.RegenerateLocalConfig">
+                <methods>
+                    <include name="checkRemoteConfigDoesNtExist" />
+                    <include name="regenerateLocalConfig" />
+                    <include name="copyLocalConfigToRemote" />
+                    <include name="deleteLocalConfigCopy" />
+                    <include name="checkRemoteConfigExist" />
+                </methods>
+            </class>
+            <class
+                name="com.ericsson.cifwk.install.test.cases.DownloadCIFwkArtifact" />
+            <class name="com.ericsson.cifwk.install.test.cases.CreateCIFwkDB" />
+            <class
+                name="com.ericsson.cifwk.install.test.cases.PopulateCIFwkDB" />
+            <class
+                name="com.ericsson.cifwk.install.test.cases.UnPackCIFwkArtifact" />
+            <class
+                name="com.ericsson.cifwk.install.test.cases.PopulateSSLCerts" />
+            <class
+                name="com.ericsson.cifwk.install.test.cases.StartCIFwkDaemon" />
+            <class name="com.ericsson.cifwk.install.test.cases.UpgradeCIFwk" />
+        </classes>
+    </test>
+    <test name="ServicesSuite">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.Services">
+                <methods>
+                    <include name="testMessageBusServices"/>
+                    <include name="testMemcachedService" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ManagementCommandsSuite">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.install.test.cases.ManagementCommands">
+                <methods>
+                    <include name="verifyManagePyFunctionality" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TestReportLinksSuite" preserve-order="true">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.ui.test.cases.TestReportLinksUI">
+                <methods>
+                    <include name="testCreateProductWithTestReport" />
+                    <include name="testReportLink" />
+                    <include name="deleteJenkinsTestReportJob" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,105 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/mapGatewayToSpp/,gateway=atvts9999&spp=cifwk.vts.com,POST,OK,Created Mapping,TRUE
+ciportal,/getSpp/,gateway=atvts9999,GET,OK,cifwk.vts.com,TRUE
+ciportal,/mapGatewayToSpp/,gateway=atvts9999&spp=cifwkdemo.vts.com,POST,OK,Created Mapping,TRUE
+ciportal,/getSpp/,gateway=atvts9999,GET,OK,cifwkdemo.vts.com,TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICcifwkportal_CXP9030099&infra=false,POST,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/getInfraFromIso/,isoVersion=3.2.1,GET,OK,[],TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICversant_CXP9030229&infra=true,POST,OK,ERICversant_CXP9030229,TRUE
+ciportal,/getInfraFromIso/,isoVersion=3.2.1,GET,OK,ERICversant_CXP9030229,TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICversant_CXP9030229&infra=false,POST,OK,ERICversant_CXP9030229,TRUE
+ciportal,/getInfraFromIso/,isoVersion=390.2.9999,GET,OK,[],TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=3.0.0",GET,OK,error,TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=2.0.11",GET,OK,[],TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICcifwkportal_CXP9030099&infra=true,POST,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=2.0.11",GET,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/updateInfraStatusOnPkg/,package=ERICcifwkportal_CXP9030099&infra=false,POST,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/getInfrastructurePackages/,"product=CI,drop=2.0.11",GET,OK,[],TRUE
+ciportal,/getArtifactFromLocalNexus/,"artifactID=ERICcifwkportal_CXP9030099,version=3.0.24",GET,OK,nexus/content/repositories/enm_proxy/com/ericsson/cifwk/ERICcifwkportal_CXP9030099/3.0.24/ERICcifwkportal_CXP9030099-3.0.24.zip,TRUE
+ciportal,/getArtifactFromLocalNexus/,"artifactID=ABCFAIL_CXP9030099,version=9.0.24",GET,OK,Warning,TRUE
+ciportal,/validateIsoUploadToHub/,"group=com/ericsson/nms,artifact=ERICaiweb_CXP9030517,version=1.0.2,extension=jar,classifier=-sources",GET,OK,SUCCESS,TRUE
+ciportal,/getPreviousEventIDs/,"groupId=com.ericsson.nms,artifactId=ERICtor_CXP9024257,version=3.26.9",GET,OK,ISOBUILD_PREVIOUS_ANE_ID=,TRUE
+ciportal,/getPreviousEventIDs/,"groupId=com.ericsson.nms,artifactId=ERICtor_CXP9024257,version=3.26.10",GET,OK,ISOBUILD_PREVIOUS_ANE_ID=,TRUE
+ciportal,/getISOContentDelta/,"product=TOR,drop=3.0.T,isoVersion=3.18.2",GET,OK,[{,TRUE
+ciportal,/getISOContentDelta/,"product=TOR,drop=3.0.T,isoVersion=3.18.1",GET,OK,first ISO Version in this drop,TRUE
+ciportal,/getISOContentDelta/,"product=TOR,drop=3.0.T,isoVersion=3.18.4",GET,OK,no Difference between Previous ISO Version,TRUE
+ciportal,/getISOContentDelta/,"product=TOR,drop=3.0.T,isoVersion=3.18.111",GET,OK,Error,TRUE
+ciportal,/getAOMRstate/,drop=15.4,GET,OK,Product required,TRUE
+ciportal,/getAOMRstate/,product=ENM,GET,OK,Drop required,TRUE
+ciportal,/getAOMRstate/,"product=ENM,drop=15.4",GET,OK,AOM901151 R1A,TRUE
+ciportal,/getAOMRstate/,"product=ENM,drop=999.999",GET,OK,Issue retrieving AOM and RSTATE information,TRUE
+ciportal,/dropsInProduct/.json/,products=ENM,GET,OK,ENM:15.12,TRUE
+ciportal,/dropsInProduct/.json/,products=ENM,GET,OK,ENM:15.10.A,FALSE
+ciportal,/dropsInProduct/.json/,products=FAKE-PRODUCT,GET,OK,[],TRUE
+ciportal,/revisionsReleasedInDrop/.json/,drops=CI:3.0.6,GET,OK,ERICcifwkportal_CXP9030099,TRUE
+ciportal,/revisionsReleasedInDrop/.json/,drops=FAKE:DROP,GET,OK,[],TRUE
+ciportal,/api/cireports/component/,format=json,GET,OK,labelName,TRUE
+ciportal,/api/cireports/component/enm/,format=json,GET,OK,"productName: "OSS_RC",FALSE
+ciportal,/api/cireports/component/enm/team/,format=json,GET,OK,"labelName: "Tribe",FALSE
+ciportal,api/deployment/clusters/,format=json,GET,OK,name,TRUE
+ciportal,api/deployment/testcases/,format=json,GET,OK,testcase_description,TRUE
+ciportal,api/deployment/testgroups/,format=json,GET,OK,testGroup,TRUE
+ciportal,api/deployment/testgroup/mapping,format=json,GET,OK,cluster,TRUE
+ciportal,/api/product/ENM/drop/15.12/isos/,format=json,GET,OK,latest,TRUE
+ciportal,/api/product/ENM/drop/15.12/isos/,format=json,GET,OK,true,TRUE
+ciportal,/api/product/ENM/drop/15.12/isos/,format=json,GET,OK,15.12,TRUE
+ciportal,/api/product/ENM/drop/15.12/isos/,format=json,GET,OK,15.11,FALSE
+ciportal,/api/product/CI/drop/15.12/isos/,format=json,GET,OK,[],TRUE
+ciportal,/api/product/ENM1/drop/15.12/isos/,format=json,GET,NOT_FOUND,Product ENM1 does not exist.,TRUE
+ciportal,/api/product/ENM/drop/15.001/isos/,format=json,GET,NOT_FOUND,Drop 15.001 does not exist for product ENM.,TRUE
+ciportal,/api/cifwk/config/section/CIFWK/option/groupId/,format=json,GET,OK,com.ericsson.cifwk,TRUE
+ciportal,/api/cifwk/config/section/CIFWK/option/groupId/,format=json,GET,OK,test,FALSE
+ciportal,/api/cifwk/config/section/TEST/option/groupId/,format=json,GET,NOT_FOUND,No section: TEST,TRUE
+ciportal,/api/cifwk/config/section/CIFWK/option/test/,format=json,GET,NOT_FOUND,No option test in section: CIFWK,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,format=json,GET,OK,com.ericsson.oss.presentation.client.fm.alarmcontroldisplaygui,TRUE
+ciportal,/api/product/TEST/drop/15.11/deliveryqueue/queued/,format=json,GET,NOT_FOUND,Product TEST does not exist.,TRUE
+ciportal,/api/product/ENM/drop/1111/deliveryqueue/queued/,format=json,GET,NOT_FOUND,Drop 1111 does not exist for product ENM.,TRUE
+ciportal,/api/product/ENM/drop/15.12/deliveryqueue/queued/,format=json,GET,OK,com.ericsson.oss.presentation.client.fm.alarmcontroldisplaygui,FALSE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"groupId=com.ericsson.oss.servicegroupcontainers,format=json",GET,OK,com.ericsson.oss.servicegroupcontainers,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"groupId=com.ericsson.oss.servicegroupcontainers,format=json",GET,OK,com.ericsson.nms.litp,FALSE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"artifact=ERICmultinodehealthmonitorapp_CXP9031838,format=json",GET,OK,ERICmultinodehealthmonitorapp_CXP9031838,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"artifact=ERICmultinodehealthmonitorapp_CXP9031838,format=json",GET,OK,ERIClitpsanapi_CXP9030787,FALSE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"deliveryGroup=348,format=json",GET,OK,348,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"deliveryGroup=348,format=json",GET,OK,348a,FALSE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"version=1.6.1,format=json",GET,OK,1.6.1,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"version=1.6.1,format=json",GET,OK,1.6.2,FALSE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"artifact=ERICmultinodehealthmonitorapp_CXP9031838,deliveryGroup=348,groupId=com.ericsson.oss.presentation.client.nhm,version=1.6.1,format=json",GET,OK,ERICmultinodehealthmonitorapp_CXP9031838,TRUE
+ciportal,/api/product/ENM/drop/15.11/deliveryqueue/queued/,"artifact=ERICmultinodehealthmonitorapp_CXP9031838,deliveryGroup=348,format=json,groupId=com.ericsson.oss.presentation.client.nhm,version=1.6.1",GET,OK,com.ericsson.oss.services.shm.model.job,FALSE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=true,format=json",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=true,format=html",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=true,format=broken",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=true",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=false,format=json",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=false,format=html",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=false,format=broken",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=false",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,format=json",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,format=html",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,format=broken",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7",GET,OK,2.20.46,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=broken,format=json",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=broken,format=html",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=broken,format=broken",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=15.7,passedOnly=broken",GET,OK,2.20.47,TRUE
+ciportal,/getlatestiso/,"product=ENM,drop=15.1,format=html",GET,OK,3.22.2,TRUE
+ciportal,/getlatestiso/,"product=ENM,drop=15.2,format=html",GET,OK,3.23.2,TRUE
+ciportal,/getlatestiso/,"product=CI,drop=3.0.5,passedOnly=true",GET,OK,None,TRUE
+ciportal,/getlatestiso/,"product=CI,drop=3.0.5,passedOnly=false",GET,OK,None,TRUE
+ciportal,/getlatestiso/,"product=CI,drop=3.0.5,format=json",GET,OK,None,TRUE
+ciportal,/getlatestiso/,"product=CI,drop=3.0.5,format=html",GET,OK,None,TRUE
+ciportal,/getlatestiso/,"product=TOR,drop=3.0.G,passedOnly=true",GET,OK,None,TRUE
+ciportal,/getlatestiso/,"product=LITPX,drop=15.7,passedOnly=true",GET,OK,None,TRUE
+ciportal,/getlatestiso/,"product=LITP,drop=1.2.3,passedOnly=true",GET,OK,None,TRUE
+ciportal,/api/product/None/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package can be created only for ENM.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package name is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package number is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&mediaCategory=sw,POST,OK,Error: User signum is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot,POST,OK,Error: Media category is required.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICAlarmRoutingServiceabcdefghijklmnopqrst_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package name length should not be more than 50 characters.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICabcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=testware,POST,OK,Error: Testware Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICTAF-abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=testware,POST,OK,Error: Testware Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICTAF.abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=testware,POST,OK,Error: Testware Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERIC-abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERIC.abcdefgh_CXP1234789&packageNumber=CXP1234789&signum=eshusot&mediaCategory=sw,POST,OK,Error: Package Name is Incorrect.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICaiws_CXP9032405&packageNumber=CXP9032405&signum=eshusot&mediaCategory=sw,POST,OK,Error: A package with the given name and number already exists. Please use different name and number.,TRUE
+ciportal,/api/product/ENM/createPackage/,packageName=ERICaiwsabccd_CXP9032405&packageNumber=CXP9032405&signum=eshusot&mediaCategory=sw,POST,OK,Error: A package with the number CXP9032405 already exists under a different name.,TRUE

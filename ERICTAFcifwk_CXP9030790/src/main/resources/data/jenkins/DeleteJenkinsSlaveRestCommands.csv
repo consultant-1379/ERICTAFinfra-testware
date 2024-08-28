@@ -1,0 +1,2 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsSlaveLabel,numberOfSlavesToDelete,cloudDatacenterName,timeoutDatacenter,timeoutCloudVapp,slaveCheckTimeout,slaveCheckRetries,ExpectedDeleteResponse,expectedSlaveExists,httpResponseDatacenter,httpResponseCloudVapp
+jenkins1,jenkins,Testing-TAF,10,CI-AXIS,50,50,60000,4,MOVED_TEMPORARILY,false,OK,OK

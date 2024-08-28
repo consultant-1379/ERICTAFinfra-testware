@@ -1,0 +1,2 @@
+vappTemplateName,catalogName,httpResponseTemplateName,expectedTemplateName,httpResponseDelete,expectedDelete,timeoutDelete,httpResponseTemplateStatus,expectedTemplateStatus,expectedTemplateExists,cloudRestTimeout
+heartbeat_enm_test_add,CI-TE-Development,OK,vapptemplates,OK,obj,660,OK,vapptemplates,no,5

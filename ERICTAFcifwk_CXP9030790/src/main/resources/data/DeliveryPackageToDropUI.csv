@@ -1,0 +1,5 @@
+id,description,host,username,password,type,product,package,rstate,email,drop,expected,timeoutInMillis
+CIP-4770_Func_1,Deliver This - New - invalid email - Failure ,ciportal,tafTest,tafTest123,new,test,ERICpmservice_CXP9030101,R2V02,wrong.email.format,1.0.2,Delivery Page,100000
+CIP-4770_Func_2,"Deliver This - New , test   - Sucessful",ciportal,tafTest,tafTest123,new,test,ERICpmservice_CXP9030101,R2V02,lciadm100@cifwk.vts.com,1.0.1,Success,100000
+CIP-4770_Func_3,"Deliver This - New, test - Failure - Same Drop",ciportal,tafTest,tafTest123,new,test,ERICpmservice_CXP9030101,R2V02,lciadm100@cifwk.vts.com,1.0.1,Failure,100000
+CIP-4770_Func_4,"Deliver This - New, test - Failure - Already in Baseline Drop",ciportal,tafTest,tafTest123,new,test,ERICpmservice_CXP9030101,R2V02,lciadm100@cifwk.vts.com,1.0.2,Failure,100000

@@ -1,0 +1,2 @@
+hostname,localFile,command,clusterId,sedVersion,remotePath,remoteFile,proto,expectedOut,timeout
+ciportal,DmtFiles/sed,curl,309,latest,/tmp/dmt/,sed,https,SUCCESS: Added,30

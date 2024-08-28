@@ -1,0 +1,2 @@
+id,description,host,tagname,timeoutInMillis,expected,prodRelease
+CIP-6329_Func_4,"Check that portal is displaying information on the specific Product Page",ciportal,dummy,60000,"test Release Page",product_test

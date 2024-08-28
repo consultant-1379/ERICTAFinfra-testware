@@ -1,0 +1,6 @@
+host,directory,assertValue,expectedExit,minSize,timeout
+ciportal,/tmp,true,0,500000,30
+ciportal,/home,true,0,5000,30
+jenkinsM1,/tmp,true,0,500000,30
+jenkinsM1,/home,true,0,5000,30
+

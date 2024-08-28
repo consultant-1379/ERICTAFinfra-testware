@@ -1,0 +1,4 @@
+hostname,command,remotePath,expectedExitCode,timeout
+ciportal,recursively.delete,/tmp/testiso/,0,3
+ciportal,make.dir.p,/tmp/testiso/,0,3
+ciportal,make.dir.p,/tmp/testiso/enm_testware_iso-bom,0,3

@@ -1,0 +1,6 @@
+expectedOut,expected
+/mnt/testIso/.version,TRUE
+/mnt/testIso/repos/ENM/testware/ERICTAFtestware1_CXP0000018-1.0.1.jar,TRUE
+/mnt/testIso/repos/ENM/testware/ERICTAFtestware2_CXP0000019-1.0.1.jar,TRUE
+/mnt/testIso/repos/ENM/testware/ERICTAFtestware3_CXP0000020-1.0.1.jar,TRUE
+/mnt/testIso/repos/ENM/testware/ERICTAFtestware4_CXP0000021-1.0.1.jar,TRUE

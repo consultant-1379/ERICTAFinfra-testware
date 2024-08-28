@@ -1,0 +1,9 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/getPackagesInISO/,"{'isoName':'testma','isoVersion':'1.0.3','pretty':true,'showTestware':false}",POST,OK,ERICtestpkg4_CXP0000005,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testma','isoVersion':'1.0.3','pretty':true,'showTestware':true}",POST,OK,ERICTAFtestware4_CXP0000021,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testwarema','isoVersion':'1.0.3','pretty':true,'showTestware':false}",POST,OK,ERICtestpkg4_CXP0000005,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testwarema','isoVersion':'1.0.2','pretty':true,'showTestware':false}",POST,NOT_FOUND,ERROR: Specified ISO does not exist,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testwarema','isoVersion':'1.0.2','pretty':true,'showTestware':true}",POST,NOT_FOUND,ERROR: Specified ISO does not exist,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testma','isoVersion':'1.0.2','pretty':true,'showTestware':true}",POST,NOT_FOUND,ERROR: No mapping to testware for this ISO,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testma','isoVersion':'99.99.99','pretty':true,'showTestware':false}",POST,NOT_FOUND,ERROR: Specified ISO does not exist,TRUE
+ciportal,/getPackagesInISO/,"{'isoName':'testma','isoVersion':'99.99.99','pretty':true,'showTestware':true}",POST,NOT_FOUND,ERROR: Specified ISO does not exist,TRUE

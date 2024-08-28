@@ -1,0 +1,3 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsLabel,numberJenkinsSlavesExpected,ExpectedAnswer
+jenkins1,jenkins,Testing-TAF,2,true
+jenkins1,jenkins,Testing-FAT,0,true

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>5</daysToKeep>
+    <numToKeep>10</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty plugin="eiffel-core@7.0.6">
+      <messagingEnabled>true</messagingEnabled>
+    </com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>ARTIFACTID</name>
+          <description></description>
+          <defaultValue>_ARTIFACTID_</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>VERSION</name>
+          <description></description>
+          <defaultValue>_VERSION_</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GROUPID</name>
+          <description></description>
+          <defaultValue>_GROUPID_</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>USERNAME</name>
+          <description></description>
+          <defaultValue>_USERNAME_</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>COMMENT</name>
+          <description></description>
+          <defaultValue>_COMMENT_</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>if [[ ${ARTIFACTID} == *AOM* ]]
+then
+  echo &quot;&lt;tr&gt;&lt;th&gt;&lt;b&gt;Product Set: &lt;b&gt;&lt;/th&gt;&lt;td&gt;${ARTIFACTID} &lt;/td&gt;&lt;tr&gt;&quot; &gt; index.html
+else
+  echo &quot;&lt;tr&gt;&lt;th&gt;&lt;b&gt;Media Artifact (ISO): &lt;b&gt;&lt;/th&gt;&lt;td&gt;${ARTIFACTID} &lt;/td&gt;&lt;tr&gt;&quot; &gt; index.html
+fi
+echo &quot;&lt;tr&gt;&lt;th&gt;&lt;b&gt;Version: &lt;/b&gt;&lt;/th&gt;&lt;td&gt;${VERSION} &lt;/td&gt;&lt;tr&gt;&quot; &gt;&gt; index.html
+echo &quot;&lt;tr&gt;&lt;th&gt;&lt;b&gt;User: &lt;/b&gt; &lt;/th&gt;&lt;td&gt;${USERNAME} &lt;/td&gt;&lt;tr&gt;&quot; &gt;&gt; index.html
+echo &quot;&lt;tr&gt;&lt;th&gt;&lt;b&gt;Comment: &lt;/b&gt; &lt;/th&gt;&lt;td&gt; ${COMMENT}&lt;/td&gt;&lt;tr&gt;&quot; &gt;&gt; index.html
+cat index.html
+
+exit 0 
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatcher plugin="eiffel-core@7.0.6">
+      <gav>
+        <groupId>${GROUPID}</groupId>
+        <artifactId>${ARTIFACTID}</artifactId>
+        <version>${VERSION}</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>CDB_KGB-Ready_COMPLETED</string>
+            <string>SUCCESS</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+      <optionalParameters>
+        <list>
+          <com.ericsson.duraci.messaging.OptionalParameter>
+            <key>manualKGBreadyDetails</key>
+            <value>http://_HOST_:8080/_JENKINSBASEDIRECTORY_/job/KGB_Ready/ws/*zip*/KGB_Ready.zip</value>
+          </com.ericsson.duraci.messaging.OptionalParameter>
+        </list>
+      </optionalParameters>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatcher>
+  </publishers>
+  <buildWrappers/>
+</project>

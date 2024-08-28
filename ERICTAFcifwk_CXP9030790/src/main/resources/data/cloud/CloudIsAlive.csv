@@ -1,0 +1,6 @@
+datacenterName,httpResponseDatacenter,expectedDatacenter,timeoutDatacenter,httpResponseVapps,expectedVapps,timeoutVapps
+CI-AXIS,OK,OrgVdc,5,OK,vapps,5
+CI-Execution-TOR2,OK,OrgVdc,5,OK,vapps,5
+CI-Execution-OSSRC,OK,OrgVdc,5,OK,vapps,5
+CI-Execution-ASSURE,OK,OrgVdc,5,OK,vapps,5
+CI-Execution-CDS,OK,OrgVdc,5,OK,vapps,5

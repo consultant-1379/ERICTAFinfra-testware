@@ -1,0 +1,2 @@
+Id,Description,HostName,baseURL,RestGetParameters,IsValidJSON,ExpectedOutput
+CIP-8082_Func_1.1,Test generate host properties,ciportal,generateTAFHostPropertiesJSON/,clusterId=309,TRUE,"http:192.168.0.120,event:10.247.246.110"

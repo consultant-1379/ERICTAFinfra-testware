@@ -1,0 +1,2 @@
+vappTemplateName,catalogName,httpResponseTemplateName,expectedTemplateName,httpResponseDelete,expectedDelete,timeoutDelete,httpResponseTemplateStatus,expectedTemplateStatus,expectedTemplateExists,cloudRestTimeout
+heartbeat_small_test_add,Axis_OrgDC1,OK,vapptemplates,OK,obj,660,OK,vapptemplates,no,5

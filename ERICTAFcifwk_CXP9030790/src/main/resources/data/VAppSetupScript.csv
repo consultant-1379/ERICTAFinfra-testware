@@ -1,0 +1,2 @@
+nexusDeployUrl,nexusDeployRepositoryId
+https://arm901-eiffel004.athtem.eei.ericsson.se:8443/nexus/content/repositories/axis_tesware_repo,axis_tesware_repo

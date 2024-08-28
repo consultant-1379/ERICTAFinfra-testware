@@ -1,0 +1,14 @@
+VappName,VmName,DatacenterName,PowerOnVm,ExpectedVMStatus,ExpectedHttpStatus,powerTimeout,expectedHttpPower,expectedPower,vcliCommandsEnabled,expectedHttpSecurityPolicySet,securityPolicyTimeout,expectedSecurityPolicySetVms,expectedVMBecameBusy,cloudRestTimeout,useNewQuotaSystem,runningVappsQuota,runningCpusQuota,runningMemoryQuota,totalVappsQuota
+spp_tc_positive,master_sc-1,Axis_OrgDC1,FALSE,POWERED_OFF,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_sc-1,Axis_OrgDC1,TRUE,POWERED_ON,OK,600,BAD_REQUEST,name,FALSE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_sc-1,Axis_OrgDC1,FALSE,POWERED_OFF,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_sc-1,Axis_OrgDC1,FALSE,POWERED_OFF,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_sc-1,Axis_OrgDC1,TRUE,POWERED_ON,OK,600,OK,obj,TRUE,OK,200,master_sc-1,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_sc-1,Axis_OrgDC1,TRUE,POWERED_ON,OK,600,OK,obj,TRUE,OK,200,master_sc-1,FALSE,50,FALSE,100,0,0,100
+spp_tc_positive,master_ms-1,Axis_OrgDC1,FALSE,POWERED_OFF,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_ms-1,Axis_OrgDC1,TRUE,POWERED_ON,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_positive,master_ms-1,Axis_OrgDC1,FALSE,POWERED_OFF,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,FALSE,100,0,0,100
+spp_tc_new_quota,master_sc-1,Axis_OrgDC2,FALSE,POWERED_OFF,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,TRUE,0,0,0,0
+spp_tc_new_quota,master_sc-1,Axis_OrgDC2,TRUE,POWERED_OFF,OK,600,BAD_REQUEST,url,TRUE,OK,200,,FALSE,50,TRUE,0,4,5,1
+spp_tc_new_quota,master_sc-1,Axis_OrgDC2,TRUE,POWERED_OFF,OK,600,BAD_REQUEST,url,TRUE,OK,200,,FALSE,50,TRUE,0,5,4,1
+spp_tc_new_quota,master_sc-1,Axis_OrgDC2,TRUE,POWERED_ON,OK,600,OK,obj,TRUE,OK,200,,TRUE,50,TRUE,0,5,5,2

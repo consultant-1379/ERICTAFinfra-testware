@@ -1,0 +1,2 @@
+host,migrateSql,generateSqlFile,curl,cifWkUrl,expectedExit,timeout
+ciportal,migrate.sql,generate.sql,curl,/getver/; echo,0,300000

@@ -1,0 +1,6 @@
+host,downloadLoc,groupId,artifactId,version,nexusUrl,downloadFile,list,expectedExit,timeout
+ciportal,/tmp/,com.ericsson.td,ERICalpha_CXP9030450,1.0.39,/nexus/content/repositories,wget.file,list.dir,0,60000
+ciportal,/tmp/,com.ericsson.td,ERICbeta_CXP9030451,1.0.49,/nexus/content/repositories,wget.file,list.dir,0,60000
+ciportal,/tmp/,com.ericsson.td,ERICalpha_CXP9030450,1.0.50,/nexus/content/repositories,wget.file,list.dir,0,60000
+ciportal,/tmp/,com.ericsson.td,ERICbeta_CXP9030451,1.0.50,/nexus/content/repositories,wget.file,list.dir,0,60000
+ciportal,/tmp/,com.ericsson.td,ERICgamma_CXP9030452,1.0.23,/nexus/content/repositories,wget.file,list.dir,0,60000

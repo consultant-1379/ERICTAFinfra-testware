@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DependencyRestCommands">
+
+    <test name="DependencyRestCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.DependencyWebCommand"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,5 @@
+id,description,host,tagname,timeoutInMillis,expected
+CIP-6191_Func_4,"Check that portal is displaying the Product Set Summary Page",ciportal,,60000,"Product Set Summary"
+CIP-6191_Func_4a,"Check that portal is displaying Virtual CDB on the Product Set Summary Page",ciportal,psTest_1_0_1_Virtual_passed,60000,"Virtual SUT Test Details"
+CIP-6191_Func_4b,"Check that portal is displaying Physical CDB on the Product Set Summary Page",ciportal,psTest_1_0_1_Physical_passed,60000,"Physical SUT Test Details"
+CIP-6191_Func_5,"Check that portal is displaying the Product Set Executive Summary Page",ciportal,psTest_1_0_1_exec_summary,60000,"Executive Summary"

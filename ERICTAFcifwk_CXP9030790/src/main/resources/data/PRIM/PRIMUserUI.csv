@@ -1,0 +1,3 @@
+id,description,hostname,args,username,password,url,product,expected,restTimeout,cliTimeout,expectedOut,expectedExitCode
+_Func_1,User Doesn't Have Access,ciportal,cifwk_createUserAndAddToGroup  --signum=test --password=testing ,test,testing,/primOptions,TOR,No Access,4000,5,OK,0
+_Func_2,User Has Access,ciportal,cifwk_createUserAndAddToGroup  --signum=axisadm --password=axis321 --group=PRIM,axisadm,axis321,/primOptions,TOR,Has Access,4000,5,OK,0

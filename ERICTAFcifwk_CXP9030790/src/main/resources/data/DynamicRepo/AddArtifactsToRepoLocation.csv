@@ -1,0 +1,6 @@
+hostname,command,location,desLocation,expectedExitCode,timeout
+ciportal,copy,/tmp/ERICalpha_CXP9030450-1.0.39.rpm,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICalpha_CXP9030450/1.0.39/,0,60000
+ciportal,copy,/tmp/ERICbeta_CXP9030451-1.0.49.rpm,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICbeta_CXP9030451/1.0.49/,0,60000
+ciportal,copy,/tmp/ERICalpha_CXP9030450-1.0.50.rpm,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICalpha_CXP9030450/1.0.50/,0,60000
+ciportal,copy,/tmp/ERICbeta_CXP9030451-1.0.50.rpm,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICbeta_CXP9030451/1.0.50/,0,60000
+ciportal,copy,/tmp/ERICgamma_CXP9030452-1.0.23.rpm,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICgamma_CXP9030452/1.0.23/,0,60000

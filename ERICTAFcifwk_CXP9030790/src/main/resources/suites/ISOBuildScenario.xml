@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ISOBuildScenario">
+    <test name="ISO Build Checks">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.ISOBuildScenarios" >
+            <methods>
+            	    <include name="ISOBuildScenario" />
+                    <include name="ISOTestwareScenario" />
+            </methods>
+            </class>
+         </classes>
+    </test>
+</suite>

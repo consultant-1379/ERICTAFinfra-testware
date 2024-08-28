@@ -1,0 +1,4 @@
+host,latestR,restVersionFromRstate,username,password,packageName,nameAttribute,number,cxpAttribute,version,versionAttribute,groupID,increment,createPackage,timeoutInSeconds
+ciportal,/getRStateFromPRIM/,/getVersionFromRstate/,axisadm,axis321,ERICbeta,name1,CXP9030451,CXP1,,version1,,TRUE,FALSE,5
+ciportal,/getRStateFromPRIM/,/getVersionFromRstate/,axisadm,axis321,ERICdelta,name2,CXP9030453,CXP2,1.0.1,version2,com.ericsson.nms,FALSE,TRUE,5
+ciportal,/getRStateFromPRIM/,/getVersionFromRstate/,axisadm,axis321,ERICInvalid,name3,CXP123ABC,CXP3,1.0.1,version3,com.ericsson.nms,FALSE,TRUE,5

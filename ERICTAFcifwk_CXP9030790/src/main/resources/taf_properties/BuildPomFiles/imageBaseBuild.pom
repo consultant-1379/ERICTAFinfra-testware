@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<!--Please Use the latest version of integration pom.xml or the one you want to reference to -->
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>13.2.0.244</version>
+    </parent>
+
+    <groupId>com.ericsson.oss.itpf</groupId>
+    <artifactId>ERICrhelimage</artifactId>
+    <version>1.0.1</version>
+    <packaging>pom</packaging>
+    <name>[${project.artifactId}] JEE6 Project</name>
+
+    <properties>
+                <os.name>RHEL-6</os.name>
+                <os.version>5</os.version>
+                <os.arch>x86_64</os.arch>
+                <os.groupID>com.ericsson.oss.itpf</os.groupID>
+                <os.artifactID>ERICrhel6.5iso</os.artifactID>
+                <os.repoversion>1.0.1</os.repoversion>
+                <os.type>iso</os.type>
+                <packaging.type>qcow2</packaging.type>
+        </properties>
+
+        <dependencies>
+                 <dependency>
+                  <groupId>com.ericsson.oss.images</groupId>
+                  <artifactId>ERICseediso</artifactId>
+                  <version>1.0.1</version>
+                  <type>iso</type>
+                </dependency>
+        </dependencies>
+
+    <build>
+            <plugins>
+             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                <file>/dev/shm/compressed_${project.artifactId}_${project.version}.qcow2</file>
+                                <type>qcow2</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+    <!--Profiles for site documentation-->
+
+     <!--Profile to deploy latest site-->
+     <profiles>
+      <profile>
+         <id>site_latest</id>
+            <distributionManagement>
+               <site>
+                 <id>site</id>
+                 <name>Site</name>
+                     <url>${site.url}/ERICrhelimage/latest</url>
+               </site>
+        </distributionManagement>
+      </profile>
+
+     <!--Profile to stage site for review-->
+
+       <profile>
+          <id>site_review</id>
+             <distributionManagement>
+                <site>
+              <id>site</id>
+              <name>Site</name>
+                  <url>${site.url}</url>
+                </site>
+         </distributionManagement>
+       </profile>
+
+       <profile>
+            <id>buildImage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.ericsson.maven.plugins</groupId>
+                        <artifactId>cifwkimagebuilder-maven-plugin</artifactId>
+                        <version>1.0.7</version>
+                        <executions>
+                            <execution>
+                                <id>build</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>buildImage</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+       </profiles>
+
+           <!--Deployment of versioned documentation-->
+           <distributionManagement>
+         <site>
+             <id>site</id>
+             <name>Site</name>
+             <url>${site.url}/ERICrhelimage/${project.version}</url>
+             </site>
+       </distributionManagement>
+
+
+</project>

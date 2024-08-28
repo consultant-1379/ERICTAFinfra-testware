@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.ericsson.duraci.injection.EiffelVariableInjectionJobProperty plugin="eiffel-core@8.0.6">
+      <explicitInjections/>
+      <armSelection>
+        <armIds class="java.util.Collections$UnmodifiableSet">
+          <c class="set"/>
+        </armIds>
+      </armSelection>
+    </com.ericsson.duraci.injection.EiffelVariableInjectionJobProperty>
+    <com.ericsson.duraci.messaging.ImplicitEiffelConfigurationNotificationMessagingJobProperty plugin="eiffel-core@8.0.6">
+      <messagingEnabled>false</messagingEnabled>
+    </com.ericsson.duraci.messaging.ImplicitEiffelConfigurationNotificationMessagingJobProperty>
+    <com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty plugin="eiffel-core@8.0.6">
+      <messagingEnabled>true</messagingEnabled>
+    </com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>ssh://_USER__MIRROR__REPO_</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>_BRANCH_</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.WipeWorkspace/>
+    </extensions>
+  </scm>
+  <quietPeriod>5</quietPeriod>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
+  <triggers>
+    <com.ericsson.duraci.triggering.MessageTrigger plugin="eiffel-core@8.0.6">
+      <spec></spec>
+      <consumers>
+        <com.ericsson.duraci.triggering.consumer.ConfidenceLevelEventConsumer>
+          <configuredBindingKey></configuredBindingKey>
+          <groupId>_GROUPID_</groupId>
+          <artifactId>_ARTIFACTID_</artifactId>
+          <requiredConfidenceLevels>
+            <map>
+              <entry>
+                <string>ACCEPTANCE_TESTING_COMPLETED</string>
+                <string>SUCCESS</string>
+              </entry>
+            </map>
+          </requiredConfidenceLevels>
+          <stateRetentionInDays>3</stateRetentionInDays>
+        </com.ericsson.duraci.triggering.consumer.ConfidenceLevelEventConsumer>
+      </consumers>
+      <project class="project" reference="../../.."/>
+      <messageDistributorPluginProvider/>
+      <purgeQueues>false</purgeQueues>
+    </com.ericsson.duraci.triggering.MessageTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Configure git to push to Gerrit Central
+git remote set-url --push origin ssh://_USER__GERRIT__REPO_
+# Workaround for JENKINS-16941
+git checkout _BRANCH_ || git checkout -b _BRANCH_
+git reset --hard origin/_BRANCH_</command>
+    </hudson.tasks.Shell>
+    <hudson.plugins.groovy.SystemGroovy plugin="groovy@1.18">
+      <scriptSource class="hudson.plugins.groovy.StringScriptSource">
+        <command>import jenkins.util.*;
+import jenkins.model.*;
+
+def thr = Thread.currentThread();
+def currentBuild = thr?.executable;
+def workspace = currentBuild.getModuleRoot().absolutize().toString();
+def project = new XmlSlurper().parse(new File(&quot;$workspace/pom.xml&quot;));
+def mvngid = new hudson.model.StringParameterValue(&quot;MAVEN_GROUPID&quot;, project.groupId.toString());
+def mvngidAction = new hudson.model.ParametersAction(mvngid);
+currentBuild.addAction(mvngidAction);
+def mvnaid = new hudson.model.StringParameterValue(&quot;MAVEN_ARTIFACTID&quot;, project.artifactId.toString());
+def mvnaidAction = new hudson.model.ParametersAction(mvnaid);
+currentBuild.addAction(mvnaidAction);
+def mvnver = new hudson.model.StringParameterValue(&quot;MAVEN_VERSION&quot;, project.version.toString().minus(&quot;-SNAPSHOT&quot;));
+def mvnverAction = new hudson.model.ParametersAction(mvnver);
+currentBuild.addAction(mvnverAction);</command>
+      </scriptSource>
+      <bindings></bindings>
+      <classpath></classpath>
+    </hudson.plugins.groovy.SystemGroovy>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep plugin="eiffel-core@8.0.6">
+      <gav>
+        <groupId>_GROUPID_</groupId>
+        <artifactId>_ARTIFACTID_</artifactId>
+        <version>${MAVEN_VERSION}</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>RELEASE_BUILD_STARTED</string>
+            <string>SUCCESS</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep>
+    <hudson.tasks.Maven>
+<!--       <targets>-V -Dresume=false release:prepare release:perform -Pdeplist  -DlocalCheckout=true -DpreparationGoals=&quot;jacoco:prepare-agent verify jacoco:report pmd:pmd&quot; -Dgoals=&quot;jacoco:prepare-agent deploy jacoco:report pmd:pmd&quot;</targets> -->
+     <targets>_BUILDCOMMAND_</targets>
+      <mavenName>Maven 3.0.5</mavenName>
+      <usePrivateRepository>false</usePrivateRepository>
+      <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+      <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+    </hudson.tasks.Maven>
+    <hudson.tasks.Shell>
+      <command>git checkout master
+git pull
+git merge _BRANCH_</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>git push ssh://_USER__GERRIT__REPO_ HEAD:master</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatcher plugin="eiffel-core@8.0.6">
+      <gav>
+        <groupId>_GROUPID_</groupId>
+        <artifactId>_ARTIFACTID_</artifactId>
+        <version>${MAVEN_VERSION}</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>RELEASE_BUILD_COMPLETED</string>
+            <string>DYNAMIC</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatcher>
+  </publishers>
+  <buildWrappers>
+    <org.jenkinsci.plugins.buildnamesetter.BuildNameSetter plugin="build-name-setter@1.3">
+      <template>#${BUILD_NUMBER} (${ENV,var=&quot;MAVEN_VERSION&quot;})</template>
+    </org.jenkinsci.plugins.buildnamesetter.BuildNameSetter>
+  </buildWrappers>
+</project>

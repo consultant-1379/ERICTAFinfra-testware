@@ -1,0 +1,5 @@
+nexusBaseDirectory,group,artifact,version,fileType,checksumType,checksumInstance,Expected
+nexus,content/repositories/litp_releases/com/ericsson/cifwk,litp2-schedule,1.0.1,jar,md5,MD5,TRUE
+nexus,content/repositories/litp_releases/com/ericsson/oss/itpf/zookeeper/litp,ERIClitpzookeeper_CXP9031318,1.0.1,rpm,md5,SHA-1,FALSE
+nexus,content/repositories/litp_releases/com/ericsson/oss/itpf/zookeeper/litp,ERIClitpzookeeper_CXP9031318,1.0.1,pom,md5,SHA-1,FALSE
+nexus,content/repositories/litp_releases/com/ericsson/oss/itpf/zookeeper/litp,ERIClitpzookeeper_CXP9031318,1.0.1,pom,md5,MD5,TRUE

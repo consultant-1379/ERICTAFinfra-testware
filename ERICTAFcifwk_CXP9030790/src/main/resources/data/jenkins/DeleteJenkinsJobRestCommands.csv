@@ -1,0 +1,3 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsJobName,jenkinsJobConfigurationFile,Expected
+jenkins1,jenkins,testJenkinsJob1,src/main/resources/taf_properties/config.xml,"MOVED_TEMPORARILY,NOT_FOUND"
+jenkins1,jenkins,testJenkinsJob2,src/main/resources/taf_properties/config.xml,"MOVED_TEMPORARILY,NOT_FOUND"

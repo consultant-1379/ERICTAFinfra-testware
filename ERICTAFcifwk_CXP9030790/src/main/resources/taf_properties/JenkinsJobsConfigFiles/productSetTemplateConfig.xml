@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty plugin="eiffel-core@8.0.6">
+      <messagingEnabled>false</messagingEnabled>
+    </com.ericsson.duraci.messaging.ImplicitEiffelMessagingJobProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+      <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep plugin="eiffel-core@8.0.6">
+      <gav>
+        <groupId>_GROUPID_</groupId>
+        <artifactId>_ARTIFACTID_</artifactId>
+        <version>_VERSION_</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>_CLUELEVELSTART1_</string>
+            <string>_CLUELEVELSTARTRESULT_</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep plugin="eiffel-core@8.0.6">
+      <gav>
+        <groupId>_GROUPID_</groupId>
+        <artifactId>_ARTIFACTID_</artifactId>
+        <version>_VERSION_</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>_CLUELEVELSTART2_</string>
+            <string>_CLUELEVELSTARTRESULT_</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep>
+    <hudson.tasks.Shell>
+      <command>sleep 5
+set</command>
+    </hudson.tasks.Shell>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep plugin="eiffel-core@8.0.6">
+      <gav>
+        <groupId>_GROUPID_</groupId>
+        <artifactId>_ARTIFACTID_</artifactId>
+        <version>_VERSION_</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>_CLUELEVELFINISH1_</string>
+            <string>_CLUELEVELFINISHRESULT_</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+      <optionalParameters>
+        <list>
+          <com.ericsson.duraci.messaging.OptionalParameter>
+            <key>testware</key>
+            <value>ERICTAFcloud_CXP9030605-VER-1.0.10</value>
+          </com.ericsson.duraci.messaging.OptionalParameter>
+          <com.ericsson.duraci.messaging.OptionalParameter>
+            <key>TestReportDirectory</key>
+            <value>http://atrcx1933vm28.athtem.eei.ericsson.se/static/tmpUploadStore/jenkins-Cloud_CDB_Auto_Deployment-11.zip</value>
+          </com.ericsson.duraci.messaging.OptionalParameter>
+        </list>
+      </optionalParameters>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep>
+    <com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep plugin="eiffel-core@8.0.6">
+      <gav>
+        <groupId>_GROUPID_</groupId>
+        <artifactId>_ARTIFACTID_</artifactId>
+        <version>_VERSION_</version>
+      </gav>
+      <confidenceLevels>
+        <map>
+          <entry>
+            <string>_CLUELEVELFINISH2_</string>
+            <string>_CLUELEVELFINISHRESULT_</string>
+          </entry>
+        </map>
+      </confidenceLevels>
+      <optionalParameters>
+        <list>
+          <com.ericsson.duraci.messaging.OptionalParameter>
+            <key>testware</key>
+            <value>ERICTAFcloud_CXP9030605-VER-1.0.10</value>
+          </com.ericsson.duraci.messaging.OptionalParameter>
+          <com.ericsson.duraci.messaging.OptionalParameter>
+            <key>TestReportDirectory</key>
+            <value>http://atrcx1933vm28.athtem.eei.ericsson.se/static/tmpUploadStore/jenkins-Cloud_CDB_Auto_Deployment-11.zip</value>
+          </com.ericsson.duraci.messaging.OptionalParameter>
+        </list>
+      </optionalParameters>
+    </com.ericsson.duraci.messaging.ConfidenceLevelMessageDispatchingBuildStep>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
+    

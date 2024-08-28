@@ -1,0 +1,9 @@
+id,description,command,args,pkgName,pkgNameAttribute,cxpAttribute,pkgVersion,versionAttribute,expectedOut,expectedExit,timeout,deliverPackage
+CIP-4771_Func_1,Create product,manage.py,create_product --product test,,,,,,OK,0,5,
+CIP-4771_Func_1a,Create Media Artifact,manage.py,create_media_artifact --name=testma --number=cxp111222 --desc=test ,,,,,,OK,0,5,
+CIP-4771_Func_2,Create Release,manage.py,create_release --product=test --releaseName=testrelname --track=12A --isoArtifact=testma --isoGroupId=com.a.b.c --isoArmRepo=releases --mediaArtifact=testma ,,,,,,OK,0,5,
+CIP-4771_Func_3,Create Drop,manage.py,create_drop --product=test --releaseName=testrelname --planned=2 --actual=2 --dropName=1.0.1 --mediaFreeze=2,,,,,,OK,0,5,
+CIP-4217_Func_13a,Test Delivery of a Package ,manage.py,cifwk_deliver --drop=1.0.1 --product=test,--package,name1,CXP1,--packageVersion,version1,Delivery successful,0,5,Yes
+CIP-4217_Func_13b,Test Delivery of a Package ,manage.py,cifwk_deliver --drop=1.0.1 --product=test,--package,name2,CXP2,--packageVersion,version2,Delivery successful,0,5,Yes
+CIP-4217_Func_13c,Test Delivery of a Package ,manage.py,cifwk_deliver --drop=1.0.1 --product=test,--package,name3,CXP3,--packageVersion,version3,Delivery successful,0,5,Yes
+CIP-4771_Func_8,create iso,manage.py,cifwk_createisocontent --product=test --release=testrelname --drop=1.0.1 --ver=1.0.1 --artifactId=testma --groupId=com.a.b.c --releaseRepoName=releases --location=tmp  ,,,,,,lciadm100@,0,20,

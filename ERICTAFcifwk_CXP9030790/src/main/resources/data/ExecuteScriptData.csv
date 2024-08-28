@@ -1,0 +1,2 @@
+host,command,args,prompt1,prompt1result,prompt2,prompt2result,expectedExit
+ciportal,file.execute,test.py,Enter your name:,Keith,Enter your age:,22,0

@@ -1,0 +1,2 @@
+vappTemplateName,catalogName,httpResponseTemplateName,expectedTemplateName,httpResponseDelete,expectedDelete,timeoutDelete,httpResponseTemplateStatus,expectedTemplateStatus,expectedTemplateExists,cloudRestTimeout
+spp_tc_positive_test_add,Axis_Catalog1,OK,vapptemplates,OK,obj,660,OK,vapptemplates,no,5

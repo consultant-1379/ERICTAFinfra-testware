@@ -1,0 +1,4 @@
+host,command,args,mysql,database,response,query,expectedOut,expectedErr,expectedExit,timeout
+ciportal,manage.py,cifwk_createpackage --name=ERICtestpack --number=CXP1501201 --resp=ehanlyn,mysql,cireports,ciroot2,select name from cireports_package where package_number='CXP1501201';,ERICtestpack,,0,10000
+ciportal,manage.py,cifwk_deletepackage --name=ERICtestpack --number=CXP1501201 --resp=ehanlyn,mysql,cireports,ciroot2,select name from cireports_package where package_number='CXP1501201';,Empty set,,0,10000
+ciportal,manage.py,cifwk_createsolutionset --name=ERICtorutilities --number=CXP9030570,mysql,cireports,ciroot2,select * from cireports_solutionset where name='ERICtorutilities' and package_number='CXP9030570';,1 row in set,,0,10000

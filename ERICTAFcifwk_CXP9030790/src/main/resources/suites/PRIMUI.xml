@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PRIMUI">
+
+  <test name="PRIMUI">
+    <classes>
+      <class name="com.ericsson.cifwk.install.test.cases.PopulateCIFwkDB">
+        <methods>
+          <include name="PopulateCIFwkDb" />
+        </methods>
+      </class>
+      <class name="com.ericsson.cifwk.ui.test.cases.PRIMSetup">
+        <methods>
+          <include name="createPackages" />
+        </methods>
+      </class>
+      <class name="com.ericsson.cifwk.install.test.cases.ManagementCommands">
+        <methods>
+          <include name="verifyManagementCommandsForAProduct" />
+        </methods>
+      </class>
+      <class name="com.ericsson.cifwk.ui.test.cases.PRIMUI">
+        <methods>
+          <include name="testingPRIMUserAccess" />
+          <include name="testingPRIMCXPUpdate" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

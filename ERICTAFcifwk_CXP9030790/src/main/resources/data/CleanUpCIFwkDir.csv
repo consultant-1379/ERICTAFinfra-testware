@@ -1,0 +1,7 @@
+command,directory,expectedExit,timeout
+recursively.delete,/proj/lciadm100/cifwk,0,5
+recursively.delete,/var/tmp/*.zip,0,8
+recursively.delete,/tmp/cifwkTmpDB,0,5
+recursively.delete,/home/lciadm100/.cifwk/config,0,5
+sudorecursively.delete,/proj/eiffel004_artifacts/,0,5
+recursively.delete,/proj/lciadm100/dynamicRepos/,0,5

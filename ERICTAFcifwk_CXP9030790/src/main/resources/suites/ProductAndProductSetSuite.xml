@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ProductAndProductSetSuite" parallel="false">
+    <test name="ProductSet" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.ui.test.cases.ProductSetTestSetup">
+                <methods>
+                    <include name="productSetInformationSetUp" />
+                    <include name="testCreateJenkinsProductSetJobConfigFile" />
+                    <include name="testCreateJenkinsProductSetJob" />
+                    <include name="testBuildJenkinsProductSetJob" />
+                    <include name="testStatusJenkinsProductSetJob" />
+                    <include name="testGetLogJenkinsProductSetJob" />
+                    <include name="testDeleteJenkinsProductSetJob" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.ui.test.cases.ProductUI" />
+            <class name="com.ericsson.cifwk.ui.test.cases.ProductSetUI" />
+        </classes>
+    </test>
+</suite>

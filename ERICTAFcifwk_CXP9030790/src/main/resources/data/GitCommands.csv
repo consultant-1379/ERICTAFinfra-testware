@@ -1,0 +1,3 @@
+host,projectName,repoDirectory,sha,assertValue,expectedExit,timeout
+jenkinsM1,OSS/com.ericsson.td/ERICgamma,/tmp/ERICgamma,5a012ba1a53d11b7c51d42253d10196fca4710a1,TRUE,0,30
+jenkinsM1,OSS/com.ericsson.td/ERICalpha,/tmp/ERICalpha,fba635449169ca2fc3339af83d3d60d0f1532a24,TRUE,0,30

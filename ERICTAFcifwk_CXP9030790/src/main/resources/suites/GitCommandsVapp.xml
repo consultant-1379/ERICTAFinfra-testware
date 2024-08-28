@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GitCommandSuiteVapp">
+    <test name="GitCommandSuiteVapp" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.ServerCheck" />
+            <class name="com.ericsson.cifwk.test.cases.GitCommands">
+                <methods>
+                    <include name="checkGerrit" />
+                    <include name="checkRepoDirectories" />
+                    <include name="cloneRepo" />
+                    <include name="setRepoSha" />
+                    <include name="populateProjectToGerrit" />
+                    <include name="setRemoteGerrit" />
+                    <include name="pushRepoToLocalGerrit" />
+                    <include name="addHookRepo" />
+                    <include name="createChange" />
+                    <include name="addChange" />
+                    <include name="commitChange" />
+                    <include name="pushForReview" />
+                    <include name="abandonReview" />
+                    <include name="cleanClone" />
+                    <include name="cleanGerrit" />
+                    <include name="flushGerritCache" />
+                    <include name="restartGerrit" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

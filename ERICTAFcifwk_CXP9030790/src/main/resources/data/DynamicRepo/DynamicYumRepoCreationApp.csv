@@ -1,0 +1,2 @@
+hostname,path,parameters,timeout,httpStatus
+ciportal,createRepo/,drop=1.0.5&product=test&baseIsoName=testma&baseIsoVersion=1.0.8&useLatestApp=True,30,test_1_0_5

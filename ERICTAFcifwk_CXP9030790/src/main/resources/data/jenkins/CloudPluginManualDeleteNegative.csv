@@ -1,0 +1,4 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsSlaveLabel,numberOfSlavesToDelete,datacenterName,cloudAlive,manualDeleteCloud,cloudDeleteSucceeds,expectedDatacenter,cloudRestTimeout,jenkinsRestTimeout,slaveDeleteTimeout,slaveOnlineTimeout,manualDeleteTimeout,expectedSlavesOnline,ExpectedDeleteResponse,expectedSlaveExistsJenkins,expectedSlaveExistsCloud,httpResponseDatacenter,httpResponseCloudVapp,slaveList
+jenkinsM1,jenkins,Vapp-Plugin-Test,1,Axis_OrgDC1,TRUE,FALSE,FALSE,OrgVdc,50,5,5000,5000,0,FALSE,MOVED_TEMPORARILY,TRUE,TRUE,OK,OK,manual
+jenkinsM1,jenkins,Vapp-Plugin-Test,1,Axis_OrgDC1,FALSE,FALSE,FALSE,OrgVdc,50,5,5000,5000,0,FALSE,MOVED_TEMPORARILY,TRUE,TRUE,OK,OK,manual
+jenkinsM1,jenkins,Vapp-Plugin-Test,1,Axis_OrgDC1,FALSE,TRUE,TRUE,OrgVdc,50,5,30000,30000,660000,FALSE,MOVED_TEMPORARILY,TRUE,FALSE,OK,OK,manual

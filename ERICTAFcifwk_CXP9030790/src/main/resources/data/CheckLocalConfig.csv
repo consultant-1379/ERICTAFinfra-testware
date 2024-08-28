@@ -1,0 +1,2 @@
+command,directory,expectedExit,timeout
+list.dir,/home/lciadm100/.cifwk/config,0,5

@@ -1,0 +1,3 @@
+hostname,localFile,remotePath,remoteFile,expectedOut,timeout
+ciportal,CifwkConfigFiles/testwareDirectoryMediaCategoryMapping.config,/tmp/testiso/,testwareDirectoryMediaCategoryMapping.config,BUILD SUCCESS,3
+ciportal,BuildPomFiles/isoTemplateTestWareBOM.pom,/tmp/testiso/enm_testware_iso-bom/,pom.xml,BUILD SUCCESS,3

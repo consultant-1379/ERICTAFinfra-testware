@@ -1,0 +1,59 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="InstallCiFwkSuite">
+    <test name="DeleteCiFwkSuite" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.install.test.cases.DropCIFwkDB" />
+            <class name="com.ericsson.cifwk.install.test.cases.CleanUpCIFwkDir" />
+        </classes>
+    </test>
+    <test name="InstallCiFwkSuite" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.install.test.cases.RegenerateLocalConfig">
+                <methods>
+                    <include name="checkRemoteConfigDoesNtExist" />
+                    <include name="regenerateLocalConfig" />
+                    <include name="copyLocalConfigToRemote" />
+                    <include name="deleteLocalConfigCopy" />
+                    <include name="checkRemoteConfigExist" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.install.test.cases.DownloadCIFwkArtifact" />
+            <class name="com.ericsson.cifwk.install.test.cases.CreateCIFwkDB" />
+            <class name="com.ericsson.cifwk.install.test.cases.PopulateCIFwkDB" />
+            <class name="com.ericsson.cifwk.install.test.cases.UnPackCIFwkArtifact" />
+            <class name="com.ericsson.cifwk.install.test.cases.PopulateSSLCerts" />
+            <class name="com.ericsson.cifwk.install.test.cases.StartCIFwkDaemon" />
+        </classes>
+    </test>
+    <test name="CleanGerrit" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.GitCommands">
+                <methods>
+                    <include name="cleanClone" />
+                    <include name="cleanGerrit" />
+                    <include name="flushGerritCache" />
+                    <include name="restartGerrit" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CleanJenkinsJobs" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestJenkinsReleaseJob">
+                <methods>
+                    <include name="testDeleteJenkinsReleaseJob" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.ui.test.cases.TestReportLinksUI">
+                <methods>
+                    <include name="deleteJenkinsTestReportJob" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestKGBAutoDeliverREST">
+                <methods>
+                    <include name="testingAutoDeliverJenkinsJobDelete"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

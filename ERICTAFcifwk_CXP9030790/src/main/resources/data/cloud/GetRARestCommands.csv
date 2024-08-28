@@ -1,0 +1,5 @@
+id,description,HostName,BaseURLDirectory,Format,ExpectedParentResult,ExpectedChildResult,InputParentElementName,InputChildElementName,InputGrandchildElementName,ExpectedReponse,Result
+CIP-6792_Func_1.1,Test basic SPP REST without output filter in xml,cloudportal,/MigRas/index_with_orgvdcs,xml,,,,,,OK,FALSE
+CIP-6792_Func_1.2,Test basic SPP REST without output filter in json,cloudportal,/MigRas/index_with_orgvdcs,json,,,,,,OK,FALSE
+CIP-6792_Func_1.3,Test SPP REST with given Real RA and Datacenter input and output filter is in xml,cloudportal,/MigRas/index_with_orgvdcs,xml,CI,Axis_OrgDC1,MigRa,OrgVdc,name,OK,TRUE
+CIP-6792_Func_1.4,Test SPP REST with given Fake RA and Datacenter input and output filter is in xml,cloudportal,/MigRas/index_with_orgvdcs,xml,Eniq,ENIQ-Deployment,MigRa,OrgVdc,name,OK,FALSE

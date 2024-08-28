@@ -1,0 +1,3 @@
+Id,Description,HostName,BaseURLDirectory,RestGetParameters,ExpectedResult
+CIP-3456_Func_10,Test if there is changes to ISO content,ciportal,checkForChanges/,"drop=1.0.4,release=testrelname,product=test",true
+CIP-3456_Func_12,Test if there is changes to ISO content,ciportal,checkForChanges/,"drop=1.0.4,release=testrelname,product=test",false

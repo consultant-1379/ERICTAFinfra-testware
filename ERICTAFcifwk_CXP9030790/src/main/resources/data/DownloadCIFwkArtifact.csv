@@ -1,0 +1,2 @@
+host,downloadLoc,groupId,artifactId,nexusUrl,downloadFile,list,expectedExit,timeout
+ciportal,/var/tmp/,com.ericsson.cifwk,ERICcifwkportal_CXP9030099,/nexus/content/repositories,wget.file,list.dir,0,60000

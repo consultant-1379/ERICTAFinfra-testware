@@ -1,0 +1,3 @@
+VappName,VmName,DatacenterName,PowerOffVm,ExpectedInitialVMStatus,ExpectedVMStatus,ExpectedHttpStatus,powerTimeout,expectedHttpPower,expectedVMBecameBusy,cloudRestTimeout
+spp_tc_positive,master_sc-2,Axis_OrgDC1,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sc-2,Axis_OrgDC1,TRUE,POWERED_OFF,,OK,600,OK,TRUE,50

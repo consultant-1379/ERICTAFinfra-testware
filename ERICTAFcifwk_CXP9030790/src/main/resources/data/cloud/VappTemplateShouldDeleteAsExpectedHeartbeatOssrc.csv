@@ -1,0 +1,2 @@
+vappTemplateName,catalogName,httpResponseTemplateName,expectedTemplateName,httpResponseDelete,expectedDelete,timeoutDelete,httpResponseTemplateStatus,expectedTemplateStatus,expectedTemplateExists,cloudRestTimeout
+heartbeat_ossrc_test_create_catalog,OSSRC-CI-CDB-UG,OK,vapptemplates,OK,obj,660,OK,vapptemplates,no,5

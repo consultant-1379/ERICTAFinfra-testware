@@ -1,0 +1,2 @@
+hostname,addCommand,contentCommand,expectedOutput,expectedExitCode,timeout
+ciportal,addyumrepo,yumrepocontent,"ERICalpha_CXP9030450.noarch 1.0.39-1,ERICbeta_CXP9030451.noarch  1.0.50-1",0,30

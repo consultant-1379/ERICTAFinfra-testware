@@ -1,0 +1,5 @@
+baseUrl,path,restParameters,type,timeout,httpResponse,expectedOut,expected
+ciportal,/getPrimData/,"username=axisadm,password=axis321,product=test,drop=1.0.6,media=1.5.1,baseproduct=CSA113109,baserevision=R5N",GET,1000,OK,<td>.CXP9024165</td><td>R1U24</td><td class='alteredprim'>R2A01</td>,TRUE
+ciportal,/getPrimData/,"username=axisadm,password=axis321,product=test,drop=1.0.6,media=1.5.1,baseproduct=CSA113109,baserevision=R5N",GET,1000,OK,<td>|P| CSA113109</td><td>R5N</td><td class='alteredprim'>R5S</td>,TRUE
+ciportal,/getPrimData/,"username=axisadm,password=axis321,product=test,drop=1.0.6,media=1.5.1,baseproduct=CSA113109,baserevision=R5N,rstate=R5T",GET,1000,OK,<td>|P| CSA113109</td><td>R5N</td><td class='alteredprim'>R5T</td>,TRUE
+ciportal,/getPrimData/,"username=axisadm,password=axis321,product=fake,drop=fake,media=fake,baseproduct=CSA113109,baserevision=R5N",GET,1000,OK,ERROR,TRUE

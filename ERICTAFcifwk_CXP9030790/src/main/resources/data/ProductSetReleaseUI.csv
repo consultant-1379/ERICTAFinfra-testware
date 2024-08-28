@@ -1,0 +1,7 @@
+id,description,host,tagname,timeoutInMillis,expected,psRelease
+CIP-6329_Func_1,"Check that portal is displaying the Product Set Release Page",ciportal,dummy,60000,"Product Sets",productSet_psTest
+CIP-6329_Func_2,"Check that portal is displaying the Virtual CDB Type on the Release Page",ciportal,_1_0_1_Virtual_passed,60000,"Virtual SUT Test Details",productSet_psTest
+CIP-6329_Func_2a,"Check that portal is displaying the Physical CDB Type on the Release Page",ciportal,_1_0_1_Physical_passed,60000,"Physical SUT Test Details",productSet_psTest
+CIP-6329_Func_2b,"Check that portal is displaying the Executive Summary on the Release Page",ciportal,psTest_1_0_1_exec_summary,60000,"Executive Summary",productSet_psTest
+
+

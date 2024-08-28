@@ -1,0 +1,3 @@
+id,description,product,relDropOne,numberOne,relDropTwo,numberTwo,relDropThree,numberThree,relDropFour,numberFour,defaultDrop,action,timeoutInMillis,expected,header
+CIP-6328_Func_3.1,Testing that Selected drop are displaying  - ENM,ENM,15.1,1,15.2,1,15.4,1,15.6,1,,submit,60000,Drops Found,product_1_header
+CIP-6328_Func_3.2,Testing that Selected drop are displaying  - ENM - cancel,ENM,,,,,,,,,,cancel,60000,Product Release Summary,product_1_header

@@ -1,0 +1,2 @@
+hostname,path,parameters,timeout,httpStatus
+ciportal,createRepo/,drop=1.0.5&product=test&addArtifacts=ERICgamma_CXP9030452::1.0.23,30,test_1_0_5

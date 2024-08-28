@@ -1,0 +1,3 @@
+hostname,mainCommand,argsOne,checkCommand,argsTwo,file,expectedExitCode,timeout
+ciportal,sudosedinplace,s/proxy=http:\/\/www-proxy.ericsson.se:8080/#proxy=http:\/\/www-proxy.ericsson.se:8080/g,grep,#proxy=http:\/\/www-proxy.ericsson.se:8080,/etc/yum.conf,0,60000
+ciportal,sudosedinplace,11i sslverify=False,grep,sslverify=False,/etc/yum.conf,0,60000

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="VappSetupScripts">
+    <test name="VappSetupScripts">
+        <classes>
+        <class name="com.ericsson.cifwk.test.cases.VappSetupScripts" />
+            <methods>
+                <include name="runSetupVapp" />
+            </methods>
+        </classes>
+    </test>
+</suite>

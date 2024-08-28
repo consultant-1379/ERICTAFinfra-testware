@@ -1,0 +1,4 @@
+hostname,localFile,remotePath,remoteFile,expectedOut,timeout
+ciportal,CifwkConfigFiles/directoryMediaCategoryMapping.config,/tmp/testiso/,directoryMediaCategoryMapping.config,BUILD SUCCESS,3
+ciportal,CifwkConfigFiles/rpmMediaCategoryMapping.config,/tmp/testiso/,rpmMediaCategoryMapping.config,BUILD SUCCESS,3
+ciportal,BuildPomFiles/isoTemplateBOM.pom,/tmp/testiso/enm_iso-bom/,pom.xml,BUILD SUCCESS,3

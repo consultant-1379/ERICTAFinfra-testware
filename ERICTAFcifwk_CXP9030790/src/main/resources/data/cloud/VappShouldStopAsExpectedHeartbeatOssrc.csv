@@ -1,0 +1,2 @@
+vappName,datacenterName,httpResponseDatacenter,expectedDatacenter,httpResponseVapp,expectedVapp,httpResponseStop,expectedStop,timeoutStop,httpResponseStatus,expectedStatus,expectedPowerStatus,expectedvAppBecameBusy,cloudRestTimeout
+heartbeat_ossrc_test_create_catalog,OSSRC-CI-CDB-UG,OK,OrgVdc,OK,vapps,OK,obj,2880,OK,vapps,POWERED_OFF,true,5

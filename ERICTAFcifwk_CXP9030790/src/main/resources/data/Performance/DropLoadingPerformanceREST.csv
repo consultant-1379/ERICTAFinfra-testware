@@ -1,0 +1,6 @@
+id,description,url,directory,timeoutOne,timeoutTwo,expected
+CIP-6341_Func_6.1,Verify Drop page load and refresh times are as expected - TOR Drop,ciportal,/TOR/drops/3.0.T/null/json/,1,1,OK
+CIP-6341_Func_6.3,Verify Drop page load and refresh times are as expected - TOR Drop,ciportal,/TOR/drops/3.0.T/null/json/,1,1,OK
+CIP-6341_Func_6.4,Verify Drop page load and refresh times are as expected - OSS-RC Drop,ciportal,/OSS-RC/drops/15.0.4/null/json/,1,1,OK
+CIP-6341_Func_6.5,Verify Drop page load and refresh times are as expected - LITP Drop,ciportal,/LITP/drops/2.1.12/null/json/,1,1,OK
+CIP-6341_Func_6.6,Verify Drop page load and refresh times are as expected - CSL-Mediation Drop,ciportal,/CSL-Mediation/drops/4.1.10/null/json/,1,1,OK

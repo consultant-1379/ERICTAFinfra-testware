@@ -1,0 +1,2 @@
+localFile,remoteLocation,vappName,datacenterName1,catalogName,vappTemplateName,httpResponseDatacenter,expectedDatacenter,httpResponseVapp,expectedVapp,httpResponseAdd,expectedAdd,timeoutAdd,httpResponseVappTemplates,expectedVappTemplates,expectedVappTemplateStatus,expectedvAppBecameBusy,expectedVappName,expectedHttpStatusSync,expectedvAppPowerStatus,datacenterName2,cloudRestTimeout
+,,heartbeat_ossrc_test_create_catalog,OSSRC-CI-CDB-UG,OSSRC-CI-CDB-UG,heartbeat_ossrc_test_create_catalog,OK,OrgVdc,OK,vapps,OK,vapp_template_id,9840,OK,vapptemplates,RESOLVED,TRUE,,,,,5

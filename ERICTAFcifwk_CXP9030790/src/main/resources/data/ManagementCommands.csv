@@ -1,0 +1,71 @@
+id,description,host,command,args,expectedOut,expectedErr,expectedExit,timeout
+CIP-6293_Func_1,create user,ciportal,manage.py,cifwk_createUserAndAddToGroup --signum tafTest --password tafTest123 --group CONFIGSUM,OK,,0,5
+CIP-4771_Func_1,Create product,ciportal,manage.py,create_product --product test,OK,,0,5
+CIP-4771_Func_1a,Create Media Artifact,ciportal,manage.py,create_media_artifact --name=testma --number=cxp111222 --desc=test ,OK,,0,5
+CIP-4771_Func_1c,Create Media Artifact,ciportal,manage.py,create_media_artifact --name=testwarema --number=cxp111224 --desc=test --type=testware,OK,,0,5
+CIP-4771_Func_1b,Create Media Artifact,ciportal,manage.py,create_media_artifact --name=testma_oss --number=cxp111223 --desc=test ,OK,,0,5
+CIP-4771_Func_2,Create Release,ciportal,manage.py,create_release --product=test --releaseName=testrelname --track=12A --isoArtifact=testma --isoGroupId=com.a.b.c --isoArmRepo=releases --mediaArtifact=testma ,OK,,0,5
+CIP-4771_Func_3,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=2 --actual=2 --dropName=1.0.1 --mediaFreeze=2 --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-4771_Func_4a,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=2 --actual=2 --dropName=1.0.2 --mediaFreeze=3 --designBase=1.0.1 --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-4771_Func_4b,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=3 --actual=3 --dropName=1.0.3 --mediaFreeze=4  --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-4771_Func_4c,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=4 --actual=4 --dropName=1.0.4 --mediaFreeze=5 --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-4771_Func_5,Create Release,ciportal,manage.py,create_release --product=OSS-RC --releaseName=OSS-RC99.0 --track=O99.0 --isoArtifact=testma_oss --isoGroupId=com.a.b.c --isoArmRepo=releases --mediaArtifact=testma_oss ,OK,,0,5
+CIP-4771_Func_6,Create Drop,ciportal,manage.py,create_drop --product=OSS-RC --releaseName=OSS-RC99.0 --planned=2 --actual=2 --dropName=99.0.1  --mediaFreeze=2 --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-4771_Func_7,Create Drop,ciportal,manage.py,create_drop --product=OSS-RC --releaseName=OSS-RC99.0 --planned=2 --actual=2 --dropName=99.0.2  --mediaFreeze=3 --designBase=99.0.1 --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-4771_Func_8,Create Product Set,ciportal,manage.py,create_product_set   --productSet=psTest,OK,,0,5
+CIP-4771_Func_9,Create Product Set Release,ciportal,manage.py,create_product_set_release --productSet=psTest --productSetReleaseName=pstestrelname --releaseNumber=AOM124521 --release=testrelname --mediaArtifact=testma --updateMasterStatus=1,OK,,0,5
+CIP-4217_Func_13a,Test Delivery of a Package ,ciportal,manage.py,cifwk_deliver --package=ERICsck_APR9010270 --packageVersion=24.2.7 --drop=1.0.1 --product=test --packageType=pkg,Delivery successful,,0,5
+CIP-4217_Func_13b,Test Delivery of a Package ,ciportal,manage.py,cifwk_deliver --package=ERICsck_APR9010270 --packageVersion=24.2.7 --drop=1.0.4 --product=test --packageType=pkg,Delivery successful,,0,5
+CIP-4217_Func_13c,Test Delivery of a Package ,ciportal,manage.py,cifwk_deliver --package=ERICtorinst_CXP9023304 --packageVersion=4.1.75 --drop=1.0.1 --product=test --packageType=rpm,Delivery successful,,0,5
+CIP-4217_Func_13d,Test Delivery of a Package ,ciportal,manage.py,cifwk_deliver --package=ERICtorinst_CXP9023304 --packageVersion=4.1.75 --drop=1.0.4 --product=test --packageType=rpm,Delivery successful,,0,5
+CIP-4770_Func_13e,Test Delivery of a Package ,ciportal,manage.py,cifwk_deliver --package=ERICsck_APR9010270 --packageVersion=24.2.7 --drop=99.0.1 --product=OSS-RC --packageType=pkg,Delivery successful,,0,5
+CIP-4771_Func_10,create iso,ciportal,manage.py,cifwk_createisocontent --product=test --release=testrelname --drop=1.0.1 --ver=1.0.1 --artifactId=testma --groupId=com.a.b.c --releaseRepoName=releases --location=/tmp  ,lciadm100@,,0,20
+CIP-4771_Func_11,create iso,ciportal,manage.py,cifwk_createisocontent --product=test --release=testrelname --drop=1.0.1 --ver=1.0.2 --artifactId=testma --groupId=com.a.b.c --releaseRepoName=releases --location=/tmp,lciadm100@,,0,20
+CIP-4770_Func_14,No Product Given,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106 --packageVersion=1.40.8 --drop=3.0.H --packageType=rpm,CommandError: Product required,,1,5
+CIP-4770_Func_15,No Drop Given,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106 --packageVersion=1.40.8  --product=TOR --packageType=rpm,CommandError: Drop required,,1,5
+CIP-4770_Func_16,No Package Version Given,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106  --drop=3.0.H --product=TOR --packageType=rpm,CommandError: Package Version required,,1,5
+CIP-4770_Func_17,No Package Given,ciportal,manage.py,cifwk_deliver  --packageVersion=1.40.8 --drop=3.0.H --product=TOR --packageType=rpm,CommandError: Package required,,1,5
+CIP-4770_Func_18,Does Not Exists - Product,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106 --packageVersion=1.40.8 --drop=1.0.1 --product=test1 --platform=none --packageType=rpm,Please contact CI Axis to give the Distribution Email list for this Product,,0,5
+CIP-4770_Func_19,Does Not Exists - Package ,ciportal,manage.py,cifwk_deliver --package=ERICdatabase_CXP9030106 --packageVersion=1.40.8 --drop=3.0.H --product=TOR --packageType=rpm,version 1.40.8 does not exist,,0,5
+CIP-4770_Func_20,Does Not Exists - Package Version,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106 --packageVersion=2.99.8 --drop=3.0.H --product=TOR --packageType=rpm,version 2.99.8 does not exist,,0,5
+CIP-4770_Func_21,Does Not Exists - Drop,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106 --packageVersion=1.40.8 --drop=3.1.H --product=TOR --packageType=rpm,does not exist,,0,5
+CIP-4770_Func_22,Does Not Exists - Platform,ciportal,manage.py,cifwk_deliver --package=ERICdatapersist_CXP9030106 --packageVersion=1.40.8 --drop=1.0.1 --product=test --platform=64 --packageType=rpm,version 1.40.8 does not exist,,0,5
+CIP-4217_Func_1,Check Mapping for ERICdatapersist_CXP9030106,ciportal,manage.py,get_testware_mappings --package=ERICcifwkportal_CXP9030099 --ver=3.0.70,ERICTAFcifwk_CXP9030790-VER-,,0,5
+CIP-4217_Func_2,Check Mapping for option required,ciportal,manage.py,get_testware_mappings,Option required,,1,5
+CIP-4217_Func_3,Get Latest Version option required,ciportal,manage.py,get_latest_version,Option required,,1,5
+CIP-4217_Func_4,Create Solution Set ERICxyz,ciportal,manage.py,cifwk_createsolutionset --name=ERICxyz --number=CXP123456,Solution Set already exists - u'SS Name: ERICxyz ; number: CXP123456',,1,5
+CIP-4217_Func_5,Create Testware POM ERICcmread_CXP9030316,ciportal,manage.py,create_testware_pom --package=ERICcmread_CXP9030316 --ver=1.2.27,{'artifactID': u'ERICTAFcmeditor_CXP9030399',,0,5
+CIP-4217_Func_6,Create Testware POM options,ciportal,manage.py,create_testware_pom,Option required,,1,5
+CIP-4217_Func_7,Update Test Status ERICdmt_CXP9030301 --ver=1.3.2 --phase=kgb,ciportal,manage.py,update_test_status --package=ERICdmt_CXP9030301 --ver=1.3.2 --phase=kgb --state=in_progress,Updating test statusERICdmt_CXP9030301,,0,5
+CIP-4217_Func_8,Test Status Options,ciportal,manage.py,update_test_status,Option required,,1,5
+CIP-4217_Func_9,Disk Usage Monitor,ciportal,manage.py,diskUsageMonitor --filesystem=/proj/ --alerts=No,Successfully returned the Monitor Disk Usage for,,0,5
+CIP-4217_Func_10,File Or Dir Usage Monitor,ciportal,manage.py,fileOrDirUsageMonitor --filesystem=/proj/lciadm100/cifwk/latest/django_proj/settings.py --monitorType=File,Successfully returned the Monitor Storage Usage for,,0,5
+CIP-4217_Func_11,File Or Dir Usage Monitor,ciportal,manage.py,fileOrDirUsageMonitor --filesystem=/proj/lciadm100/cifwk/latest/django_proj --monitorType=Directory,Successfully returned the Monitor Storage Usage for,,0,5
+CIP-4217_Func_12,File Or Dir Usage Monitor,ciportal,manage.py,fileOrDirUsageMonitor --filesystem=/proj/lciadm100/cifwk/latest/django_proj/test.txt,Please Select Monitor Type,,1,5
+CIP-4681_Func_1,Create Mapping,ciportal,manage.py,create_testwaremapping --testware ERICTAFalarmsupervision_CXP9030693 --package ERICaicore_CXP9030518,Mapping Created,,0,5
+CIP-4681_Func_2,Already  Exists in Database,ciportal,manage.py,create_testwaremapping --testware ERICTAFalarmsupervision_CXP9030693 --package ERICaicore_CXP9030518,CommandError: Mapping Already Exists in Database,,1,5
+CIP-4681_Func_3,Get Testware Mapping,ciportal,manage.py,get_testwaremapping --testware ERICTAFalarmsupervision_CXP9030693 --package ERICaicore_CXP9030518,There is Mapping between Package: ERICaicore_CXP9030518 and Testware: ERICTAFalarmsupervision_CXP9030693,,0,5
+CIP-4681_Func_4,Delete Testware Mapping,ciportal,manage.py,delete_testwaremapping --testware ERICTAFalarmsupervision_CXP9030693 --package ERICaicore_CXP9030518,Mapping Deleted,,0,5
+CIP-4681_Func_5,Delete Testware Mapping - Does not Exist,ciportal,manage.py,delete_testwaremapping --testware ERICTAFalarmsupervision_CXP9030693 --package ERICaicore_CXP9030518,CommandError: Mapping Does Not Exist in Database.,,1,5
+CIP-4681_Func_6,Get Testware Mapping - Does not Exist,ciportal,manage.py,get_testwaremapping --testware ERICTAFalarmsupervision_CXP9030693 --package ERICaicore_CXP9030518,CommandError: Does Not Exists in Database - TestwarePackageMapping matching query does not exist.,,1,5
+CIP-4556_Func_1,Test Stacked Dependency Function to return no Dependencies found,ciportal,manage.py,stackDependencyGeneration --artifactName=ERICpmservice_CXP9030101 --artifactVersion=2.16.3,There was no Artifact dependencies found based on the input data,,1,5
+CIP-4556_Func_2,Test Stacked Dependency Management Function for Known Artifact with unknown Version Response,ciportal,manage.py,stackDependencyGeneration --artifactName=ERICpmservice_CXP9030101 --artifactVersion=2.16.4,Artifact Name with given Version does not exist,,1,5
+CIP-4556_Func_3,Test Stacked Dependency Management Function for unknown Version Response,ciportal,manage.py,stackDependencyGeneration --artifactName=ERICpmservicem_CXP90301012 --artifactVersion=3.16.4,Artifact Name does not exist in the cifwk database,,1,5
+CIP-4556_Func_4,Test Stacked Dependency Management Function for incomplete parameter Artifact Version not supplied,ciportal,manage.py,stackDependencyGeneration --artifactName=ERICpmservicem_CXP90301012,Artifact Version is required,,1,5
+CIP-4556_Func_5,Test Stacked Dependency Management Function for incomplete parameter Artifact Name not supplied,ciportal,manage.py,stackDependencyGeneration --artifactVersion=3.16.4,Artifact Name is required,,1,5
+CIP-1718_Func_1a.1,Test Package One,ciportal,manage.py,cifwk_createpackage --name=ERICtestingautodeliverone_CXP10010001 --number=CXP10010001 --resp=signum,OK,,0,5
+CIP-1718_Func_1a.2,Test Package Revision One,ciportal,manage.py,cifwk_createpackagerevision --name=ERICtestingautodeliverone_CXP10010001 --number=CXP10010001 --ver=1.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=test --intendedDrop=1.0.3 --autoDeliver=True,OK,,0,5
+CIP-1718_Func_1b.1,Test Package Two,ciportal,manage.py,cifwk_createpackage --name=ERICtestingautodelivertwo_CXP20010001 --number=CXP20010001 --resp=signum,OK,,0,5
+CIP-1718_Func_1b.2,Test Package Revision Two,ciportal,manage.py,cifwk_createpackagerevision --name=ERICtestingautodelivertwo_CXP20010001 --number=CXP20010001 --ver=1.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=test --intendedDrop=1.0.3 --autoDeliver=True,OK,,0,5
+CIP-1718_Func_1c.1,Test Package Three,ciportal,manage.py,cifwk_createpackage --name=ERICtestingautodeliverthree_CXP30010001 --number=CXP30010001 --resp=signum,OK,,0,5
+CIP-1718_Func_1c.2,Test Package Revision Three,ciportal,manage.py,cifwk_createpackagerevision --name=ERICtestingautodeliverthree_CXP30010001 --number=CXP30010001 --ver=1.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=test --intendedDrop=1.0.3 --autoDeliver=True,OK,,0,5
+CIP-1718_Func_1d.1,Test Package Four,ciportal,manage.py,cifwk_createpackage --name=ERICtestingautodeliverfour_CXP40010001 --number=CXP40010001 --resp=signum,OK,,0,5
+CIP-1718_Func_1d.2,Test Package Revision Four,ciportal,manage.py,"cifwk_createpackagerevision --name=ERICtestingautodeliverfour_CXP40010001 --number=CXP40010001 --ver=1.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=test --intendedDrop=1.0.3,1.0.4 --autoDeliver=True",OK,,0,5
+CIP-1718_Func_1e.1,Test Package Five,ciportal,manage.py,cifwk_createpackage --name=ERICtestingautodeliverfive_CXP50010001 --number=CXP50010001 --resp=signum,OK,,0,5
+CIP-1718_Func_1e.2,Test Package Revision Five,ciportal,manage.py,"cifwk_createpackagerevision --name=ERICtestingautodeliverfive_CXP50010001 --number=CXP50010001 --ver=1.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=test --intendedDrop=1.0.3,1.0.4 --autoDeliver=True",OK,,0,5
+CIP-1718_Func_1f.1,Test Package Six,ciportal,manage.py,cifwk_createpackage --name=ERICtestingautodeliversix_CXP60010001 --number=CXP60010001 --resp=signum,OK,,0,5
+CIP-1718_Func_1f.2,Test Package Revision Six,ciportal,manage.py,cifwk_createpackagerevision --name=ERICtestingautodeliversix_CXP60010001 --number=CXP60010001 --ver=1.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=TOR --intendedDrop=1.0.3 --autoDeliver=True,OK,,0,5
+CIP-3456_Func_2.1,Package ERICtestimage_CXP0000008,ciportal,manage.py,cifwk_createpackage --name=ERICtestimage_CXP0000008 --number=CXP0000008 --resp=signum,OK,,0,5
+CIP-3456_Func_2.2,Package Revision ERICtestimage_CXP0000008,ciportal,manage.py,cifwk_createpackagerevision --name=ERICtestimage_CXP0000008 --number=CXP0000008 --ver=1.0.1 --groupid=com.ericsson.cifwk --type=qcow2 --mediaCategory=image --mediaPath=None --product=test --intendedDrop=1.0.4 --autoDeliver=True,OK,,0,5
+CIP-8215_Func_1.0,Create Label and Component,ciportal,manage.py,create_artifact_association_setup --label=CI --parent=CI-Line --child=CI-Axis --product=CI,OK,,0,5
+CIP-7454 _Func_1.0,restart.http deamon,ciportal,restart.http,,OK,,0,5

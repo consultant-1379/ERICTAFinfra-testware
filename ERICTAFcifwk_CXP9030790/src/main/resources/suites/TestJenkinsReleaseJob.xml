@@ -1,0 +1,52 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestJenkinsReleaseJob">
+
+    <test name="CleanGerrit" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.GitCommands">
+                <methods>
+                    <include name="cleanClone" />
+                    <include name="cleanGerrit" />
+                    <include name="flushGerritCache" />
+                    <include name="restartGerrit" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TestJenkinsReleaseJob" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.GitCommands">
+                <methods>
+                    <include name="checkGerrit" />
+                    <include name="checkRepoDirectories" />
+                    <include name="cloneRepo" />
+                    <include name="setRepoSha" />
+                    <include name="populateProjectToGerrit" />
+                    <include name="setRemoteGerrit" />
+                    <include name="pushRepoToLocalGerrit" />
+                    <include name="addHookRepo" />
+                    <include name="createChange" />
+                    <include name="addChange" />
+                    <include name="commitChange" />
+                    <include name="pushForReview" />
+                    <include name="abandonReview" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestJenkinsReleaseJob">
+                <methods>
+                    <include name="testCreateJenkinsReleaseJobConfigFile" />
+                    <include name="testCreateJenkinsReleaseJob" />
+                    <include name="testBuildJenkinsReleaseJob" />
+                    <include name="testJenkinsReleaseJobStatus" />
+                    <include name="testGetJenkinsReleaseJobLog" />
+                    <include name="testDeleteJenkinsReleaseJob" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.rest.test.cases.NexusArtifactChecksumTest">
+                <methods>
+                    <include name="testArtifactChecksum" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

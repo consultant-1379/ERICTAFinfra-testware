@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UpdateCIFWKISODataRESTSuite">
+   <test name="UpdateCIFWKISODataRESTSuite">
+     <classes>
+       <class name="com.ericsson.cifwk.rest.test.cases.UpdateCIFWKISODataREST" />
+     </classes>
+   </test>
+</suite>

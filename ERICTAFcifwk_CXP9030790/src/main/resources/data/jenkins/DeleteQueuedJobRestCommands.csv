@@ -1,0 +1,3 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsJobName,Expected
+jenkins1,jenkins,testJenkinsJob1,True
+jenkins1,jenkins,testJenkinsJob3,NOT_FOUND

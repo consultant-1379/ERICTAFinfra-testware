@@ -1,0 +1,2 @@
+id,description,host,directory,product,dropName,timeoutInMillisOne,timeoutInMillisTwo,expected
+CIP-6341_Func_2.1,Verify Drop page load and refresh times are as expected - test Drop UI,ciportal,/test/releases,test,1.0.2,12000,8000,Drop Page Loaded

@@ -1,0 +1,2 @@
+id,description,host,directory,username,timeoutInMillis,expected
+CIP-6341_Func_1.1,Verify that a use can enable and disable auto refresh on a given webpage and this refreshes every 30 seconds - TOR Releases,ciportal,/login,HERE,60000,Auto Refresh Disable Working

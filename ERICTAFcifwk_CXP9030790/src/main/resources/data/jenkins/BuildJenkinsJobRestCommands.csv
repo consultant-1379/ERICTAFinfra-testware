@@ -1,0 +1,6 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsJobName,jenkinsJobParameters,Expected
+jenkins1,jenkins,testJenkinsJob1,,CREATED
+jenkins1,jenkins,testJenkinsJob2,,CREATED
+jenkins1,jenkins,testJenkinsJob3,,NOT_FOUND
+jenkins1,jenkins,testJenkinsJob1,,CREATED
+jenkins1,jenkins,testJenkinsJob2,,CREATED

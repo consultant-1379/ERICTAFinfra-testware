@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+         <groupId>com.ericsson.oss.itpf</groupId>
+         <artifactId>ERICrhel6baseimage_CXP9031559</artifactId>
+         <version>1.0.2</version>
+    </parent>
+
+    <groupId>com.ericsson.oss.itpf</groupId>
+    <artifactId>ERICrhel6jbossimage_CXP9031560</artifactId>
+    <version>1.0.2</version>
+    <packaging>pom</packaging>
+    <name>[${project.artifactId}] Image Build Project</name>
+
+     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <publish_artifact>true</publish_artifact>
+        <packaging.type>qcow2</packaging.type>
+        <build.type>customize</build.type>
+        <media.category>image</media.category>
+        <artifact.to.install>java-1.7.0-openjdk-devel, ERICalpha_CXP9030450</artifact.to.install>
+        <thirdparty.yum.repo>https://cifwk-oss.lmera.ericsson.se/static/dynamicRepos/atvts818yumRepo</thirdparty.yum.repo>
+        <delivery.drop>2.0.1</delivery.drop>
+        <product>CI</product>
+     </properties>
+
+    <!--Profiles for site documentation-->
+    <profiles>
+        <!--Profile to deploy latest site-->
+        <profile>
+            <id>site_latest</id>
+            <distributionManagement>
+                <site>
+                    <id>site</id>
+                    <name>Site</name>
+                    <url>${site.url}/ERICrhel6jbossimage/latest</url>
+                </site>
+            </distributionManagement>
+        </profile>
+
+        <!--Profile to stage site for review-->
+        <profile>
+            <id>site_review</id>
+            <distributionManagement>
+                <site>
+                    <id>site</id>
+                    <name>Site</name>
+                    <url>${site.url}</url>
+                </site>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+    <!--Deployment-->
+    <distributionManagement>
+        <site>
+            <id>site</id>
+            <name>Site</name>
+            <url>${site.url}/ERICrhel6jbossimage/${project.version}</url>
+        </site>
+    </distributionManagement>
+</project>

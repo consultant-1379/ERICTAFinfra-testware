@@ -1,0 +1,5 @@
+id,description,host,directory,product,timeoutInMillis,expected
+CIP-6341_Func_4.1,Verify Product Testware page load and refresh times are as expected - TOR Testware,ciportal,/TOR/testware,TOR,40000,Testware Page Loaded
+CIP-6341_Func_4.2,Verify Product Testware page load and refresh times are as expected - OSS-RC Testware,ciportal,/OSS-RC/testware,OSS-RC,40000,Testware Page Loaded
+CIP-6341_Func_4.3,Verify Product Testware page load and refresh times are as expected - LITP Testware,ciportal,/LITP/testware,LITP,40000,Testware Page Loaded
+CIP-6341_Func_4.4,Verify Product Testware page load and refresh times are as expected - CSL-Mediation Testware,ciportal,/CSL-Mediation/testware,CSL-Mediation,40000,Testware Page Loaded

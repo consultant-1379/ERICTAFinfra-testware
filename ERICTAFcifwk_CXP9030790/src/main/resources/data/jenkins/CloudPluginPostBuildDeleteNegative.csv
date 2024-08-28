@@ -1,0 +1,3 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsSlaveLabel,jenkinsJobName,jenkinsJobParameters,datacenterName,cloudAlive,cloudDeleteSucceeds,expectedDatacenter,cloudRestTimeout,jenkinsRestTimeout,slaveDeleteTimeout,slaveOnlineTimeout,expectedSlavesOnline,ExpectedDeleteResponse,expectedSlaveExistsJenkins,expectedSlaveExistsCloud,expectedJobResult,httpResponseDatacenter,httpResponseCloudVapp,slaveList
+jenkinsM1,jenkins,Vapp-Plugin-PostBuild-Test,CloudPluginDeletePostBuildStep,,Axis_OrgDC1,TRUE,FALSE,OrgVdc,50,5,30000,30000,FALSE,MOVED_TEMPORARILY,TRUE,TRUE,FAILURE,OK,OK,PostBuild
+jenkinsM1,jenkins,Vapp-Plugin-PostBuild-Test,CloudPluginDeletePostBuildStep,,Axis_OrgDC1,FALSE,FALSE,OrgVdc,50,5,30000,30000,FALSE,MOVED_TEMPORARILY,TRUE,TRUE,FAILURE,OK,OK,PostBuild

@@ -1,0 +1,28 @@
+# Compiled source #
+*.class
+
+# Eclipse files
+.project
+.classpath
+.settings
+.metadata
+
+# Test output files
+*/test-output/*
+/test-output/
+/test-output
+test-output/
+test-output/**/*
+*/test-output/**/*
+*/tmp/*
+tmp/
+*.swp
+
+# Packages
+*.jar
+*.dll
+*.exe
+
+# Maven build files
+target
+reports

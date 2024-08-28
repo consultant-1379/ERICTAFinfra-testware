@@ -1,0 +1,227 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CIFWKPortalTest" parallel="false">
+    <test name="UpgradeCiFwkSuite" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.install.test.cases.UpgradeCIFwk" />
+            <class name="com.ericsson.cifwk.install.test.cases.DisableHttps" />
+        </classes>
+    </test>
+    <test name="Various Portal REST Checks - Spp, Gateway and Component">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+                <methods>
+                    <include name="portalRESTScenario" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ServicesSuite">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.Services">
+                <methods>
+                    <include name="testMessageBusServices" />
+                    <include name="testMemcachedService" />
+                </methods>
+             </class>
+        </classes>
+    </test>
+    <!--<test name="DMT Checks">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.DMTScenarios" />
+        </classes>
+    </test> -->
+    <test name="TestJenkinsReleaseJob" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.GitCommands">
+                <methods>
+                    <include name="checkGerrit" />
+                    <include name="checkRepoDirectories" />
+                    <include name="cloneRepo" />
+                    <include name="setRepoSha" />
+                    <include name="populateProjectToGerrit" />
+                    <include name="setRemoteGerrit" />
+                    <include name="pushRepoToLocalGerrit" />
+                    <include name="addHookRepo" />
+                    <include name="createChange" />
+                    <include name="addChange" />
+                    <include name="commitChange" />
+                    <include name="pushForReview" />
+                    <include name="abandonReview" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestJenkinsReleaseJob">
+                <methods>
+                    <include name="testCreateJenkinsReleaseJobConfigFile" />
+                    <include name="testCreateJenkinsReleaseJob" />
+                    <include name="testBuildJenkinsReleaseJob" />
+                    <include name="testJenkinsReleaseJobStatus" />
+                    <include name="testGetJenkinsReleaseJobLog" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.rest.test.cases.NexusArtifactChecksumTest">
+                <methods>
+                    <include name="testArtifactChecksum" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ManagementCommandsBuildImageInParrellalScenario">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.ManagementCommandsScenario" />
+        </classes>
+    </test>
+    <test name="TestReportLinksSuite" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.ui.test.cases.TestReportLinksUI">
+                <methods>
+                    <include name="testCreateProductWithTestReport" />
+                    <include name="testReportLink" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ProcessArtifactsSuite">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.ProcessArtifacts" />
+        </classes>
+    </test>
+    <test name="DependencyRestCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.DependencyWebCommand" />
+        </classes>
+    </test>
+    <test name="UpdateCIFWKISODataRESTSuite">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.rest.test.cases.UpdateCIFWKISODataREST" />
+        </classes>
+    </test>
+    <test name="GenericRESTCommand">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+                <methods>
+                    <include name="genericPortalRESTScenario" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CIPortalPerformanceSuite">
+        <classes>
+            <class name="com.ericsson.cifwk.ui.test.cases.PerformanceUI" />
+            <class name="com.ericsson.cifwk.rest.test.cases.PerformanceRESTCommands" />
+        </classes>
+    </test>
+    <test name="CIPortalSummaryPageConfiguration" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.ui.test.cases.SummaryPageConfigurationUI" />
+        </classes>
+    </test>
+    <test name="SEDCommands" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.TestSEDCommands">
+                <methods>
+                    <include name="verifySEDCLIFunctionality" />
+                    <include name="verifySEDRESTFunctionality" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TestISOContent" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestISOContents" />
+        </classes>
+    </test>
+    <test name="TestKGBMetricsREST" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestKGBMetricsREST" />
+        </classes>
+    </test>
+    <test name="MavenBuildandDeployArtifactsSuite" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.GeneralPortalTesting">
+                <methods>
+                    <include name="verifyMvnBuildFunctionality" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="DeliveryRESTCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.DeliveryRESTCommand" />
+        </classes>
+    </test>
+    <test name="DeliveryManageCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.install.test.cases.ManagementCommandsDelivery" />
+        </classes>
+    </test>
+    <test name="TestJSONHostProperties">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestJSONHostProperties" />
+        </classes>
+    </test>
+    <test name="ISOBuildScenario">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.ISOBuildScenarios" />
+        </classes>
+    </test>
+    <test name="ISORESTInfraScenario">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+                <methods>
+                    <include name="InfraRESTScenario" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="KGBAutoDeliver">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.TestKGBAutoDeliverREST">
+                <methods>
+                    <include name="testingAutoDeliverJenkinsJobCreate"/>
+                    <include name="testingAutoDeliveryREST"/>
+                    <include name="testingAutoDeliveryMultiREST"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CLUEStatus">
+        <classes>
+            <class name="com.ericsson.cifwk.ui.test.cases.CLUEstatus" />
+        </classes>
+    </test>
+    <test name="DeliveryUI">
+        <classes>
+            <class name="com.ericsson.cifwk.ui.test.cases.DeliveryPackageToDropUI" />
+            <class name="com.ericsson.cifwk.ui.test.cases.DeliveryMediaArtifactToDropUI" />
+        </classes>
+    </test>
+    <test name="DynamicRepo">
+       <classes>
+           <class name="com.ericsson.cifwk.scenarios.DynamicRepoScenario" />
+       </classes>
+    </test>
+    <test name="PRIM">
+       <classes>
+           <class name="com.ericsson.cifwk.scenarios.PrimScenario" />
+       </classes>
+    </test>
+    <test name="VappSetupScripts">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.VappSetupScripts" >
+               <methods>
+                   <include name="runSetupVapp" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OpenCloseDropRESTCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+                <methods>
+                    <include name="openCloseDropRESTScenario" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

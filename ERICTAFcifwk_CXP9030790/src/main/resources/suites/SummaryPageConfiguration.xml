@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CIPortalSummaryPageConfiguration">
+  <test name="CIPortalSummaryPageConfiguration">
+    <classes>
+      <class name="com.ericsson.cifwk.install.test.cases.ManagementCommands" >
+       <methods>
+         <include name="verifyManagePyFunctionality" />
+       </methods>
+      </class>
+      <class name="com.ericsson.cifwk.ui.test.cases.SummaryPageConfigurationUI" />
+    </classes>
+  </test>
+</suite>
+

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DynamicRepo">
+  <test name="DynamicRepo">
+    <classes>
+      <class name="com.ericsson.cifwk.install.test.cases.ManagementCommands" >
+       <methods>
+         <include name="verifyManagePyFunctionality" />
+       </methods>
+      </class>
+      <class name="com.ericsson.cifwk.scenarios.DynamicRepoScenario" />
+    </classes>
+  </test>
+</suite>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CloudPortalUpdateDataCenterWithRA">
+    <test name="CloudPortalUpdateDataCenterWithRA" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cloudPortal.rest.test.cases.TestGetRARestCommand">
+                <methods>
+                    <include name="verifyCloudPortalGetRARestFunctionality" />   
+                    <include name="verifyCloudPortalGetDataCeneterRestFunctionality" />
+                    <include name="verifyCloudPortalGetEventsRestFunctionality" />              
+                </methods>
+            </class>
+            <class name="com.ericsson.cloudPortal.ui.test.cases.TestCloudPortalUpdateDataCenterData">
+                <methods>
+                    <include name="testCloudPortalUpdateOrgsVDCWithRA" />               
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,2 @@
+id,description,Host,Product,Release,Version,ProductSetRA,ProductSetRelease,Expected,timeoutInMillis
+CIP-6143_Func_2&3,Verify that KGB Ready Icons and Click are Working as expected on the CI Portal UI,ciportal,TOR,"3.0.S","3.17.21",OSS-RC,5.0.3,Success,100000

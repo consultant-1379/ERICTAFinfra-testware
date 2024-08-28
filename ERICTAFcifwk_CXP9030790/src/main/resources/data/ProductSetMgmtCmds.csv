@@ -1,0 +1,13 @@
+id,description,host,command,args,expectedOut,expectedErr,expectedExit,timeout
+CIP-6191_Func_1,Create product,ciportal,manage.py,create_product --product test,OK,,0,5
+CIP-6191_Func_1a,Create Media Artifact,ciportal,manage.py,create_media_artifact --name=testma --number=cxp111222 --desc=test ,OK,,0,5
+CIP-6191_Func_1b,Create Media Artifact,ciportal,manage.py,create_media_artifact --name=testma_oss --number=cxp111223 --desc=test ,OK,,0,5
+CIP-6191_Func_1c,Create Release,ciportal,manage.py,create_release --product=test --releaseName=testrelname --track=12A --isoArtifact=testma --isoGroupId=com.a.b.c --isoArmRepo=releases --mediaArtifact=testma ,OK,,0,5
+CIP-6191_Func_1d,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=2 --actual=2 --dropName=1.0.1 --mediaFreeze=2,OK,,0,5
+CIP-6191_Func_1e,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=2 --actual=2 --dropName=1.0.2 --mediaFreeze=3 --designBase=1.0.1,OK,,0,5
+CIP-6191_Func_1f,Create Release,ciportal,manage.py,create_release --product=OSS-RC --releaseName=OSS-RC99.0 --track=O99.0 --isoArtifact=testma_oss --isoGroupId=com.a.b.c --isoArmRepo=releases --mediaArtifact=testma_oss,OK,,0,5
+CIP-6191_Func_1g,Create Drop,ciportal,manage.py,create_drop --product=OSS-RC --releaseName=OSS-RC99.0 --planned=2 --actual=2 --dropName=99.0.1  --mediaFreeze=2,OK,,0,5
+CIP-6191_Func_1h,Create Drop,ciportal,manage.py,create_drop --product=OSS-RC --releaseName=OSS-RC99.0 --planned=2 --actual=2 --dropName=99.0.2  --mediaFreeze=3 --designBase=99.0.1,OK,,0,5
+CIP-6191_Func_1i,Create Product Set,ciportal,manage.py,create_product_set   --productSet=psTest,OK,,0,5
+CIP-6191_Func_1j,Create Product Set Release,ciportal,manage.py,create_product_set_release --productSet=psTest --productSetReleaseName=psRelname --releaseNumber=AOM124521 --release=testrelname --mediaArtifact=testma --updateMasterStatus=1,OK,,0,5
+CIP-6191_Func_1k,Create Product Set Release Version,ciportal,manage.py,create_product_set_version --productSet=psTest --drop=1.0.1,OK,,0,5

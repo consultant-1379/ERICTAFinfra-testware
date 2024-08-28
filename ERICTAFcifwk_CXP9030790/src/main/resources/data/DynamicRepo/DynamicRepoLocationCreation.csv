@@ -1,0 +1,16 @@
+hostname,parameters,commandOne,expectedExitCode,commandTwo,expected,timeout
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage,sudomake.dir.p,0,direxists,exists,30
+ciportal,/proj,sudochmod777.r,0,direxists,exists,30
+ciportal,/proj/lciadm100/dynamicRepos,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICalpha_CXP9030450,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICalpha_CXP9030450/1.0.39,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICalpha_CXP9030450/1.0.50,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICbeta_CXP9030451,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICbeta_CXP9030451/1.0.49,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICbeta_CXP9030451/1.0.50,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICgamma_CXP9030452,make.dir,0,direxists,exists,30
+ciportal,/proj/eiffel004_artifacts/arm101/nexus_work_dir/storage/releases/com/ericsson/td/ERICgamma_CXP9030452/1.0.23,make.dir,0,direxists,exists,30

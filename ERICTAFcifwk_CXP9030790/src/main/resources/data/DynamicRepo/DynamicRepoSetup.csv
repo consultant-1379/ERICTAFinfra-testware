@@ -1,0 +1,8 @@
+hostname,command,args,expectedOut,expectedErr,expectedExit,timeout
+ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=5 --actual=5 --dropName=1.0.5 --mediaFreeze=6 --systemInfo=AOM9999999_R9Z,OK,,0,5
+ciportal,manage.py,cifwk_deliver --package=ERICalpha_CXP9030450 --packageVersion=1.0.39 --drop=1.0.5 --product=test --packageType=rpm,Delivery successful,,0,5
+ciportal,manage.py,cifwk_deliver --package=ERICbeta_CXP9030451 --packageVersion=1.0.49 --drop=1.0.5 --product=test --packageType=rpm,Delivery successful,,0,5
+ciportal,manage.py,cifwk_createisocontent --product=test --release=testrelname --drop=1.0.5 --ver=1.0.8 --artifactId=testma --groupId=com.a.b.c --releaseRepoName=releases --location=/tmp  ,lciadm100@,,0,20
+ciportal,manage.py,set_MediaArtifact_CDB_Status --product=test --drop=1.0.5 --mediaArtifact=testma --ver=1.0.8 --status=passed,OK,,0,5
+ciportal,manage.py,cifwk_deliver --package=ERICalpha_CXP9030450 --packageVersion=1.0.50 --drop=1.0.5 --product=test --packageType=rpm,Delivery successful,,0,5
+ciportal,manage.py,cifwk_deliver --package=ERICbeta_CXP9030451 --packageVersion=1.0.50 --drop=1.0.5 --product=test --packageType=rpm,Delivery successful,,0,5

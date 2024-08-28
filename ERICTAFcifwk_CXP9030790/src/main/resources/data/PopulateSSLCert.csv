@@ -1,0 +1,2 @@
+host,mkdir,changedir,sslDir,copyssl,extractssl,expectedExit,timeout
+ciportal,make.dir.p,change.dir,/proj/lciadm100/cifwk/ssl,copy.ssl,extract.ssl,0,300000

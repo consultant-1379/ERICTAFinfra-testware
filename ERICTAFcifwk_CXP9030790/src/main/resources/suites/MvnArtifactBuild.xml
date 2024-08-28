@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MvnCommands">
+    <test name="MvnCommands" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.install.test.cases.ManagementCommands" >
+                <methods>
+                    <include name="verifyManagePyFunctionality"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.test.cases.GeneralPortalTesting">
+                <methods>
+                    <include name="verifyMvnBuildFunctionality" />
+                </methods>
+            </class>        
+            <class name="com.ericsson.cifwk.install.test.cases.ManagementCommandsDelivery" />
+        </classes>
+    </test>
+    <test name="DeliveryRESTCommands">
+        <classes>
+            <class name="com.ericsson.cifwk.rest.test.cases.DeliveryRESTCommand"/>
+        </classes>
+    </test>
+</suite>

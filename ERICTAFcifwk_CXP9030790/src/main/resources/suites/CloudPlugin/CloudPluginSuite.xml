@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CloudPluginSuite">
+	<test name="CloudPlugin" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.cloud.scenarios.CloudPluginScenarios">
+				<methods>
+					<include name="cloudPluginPositiveScenario" />
+					<include name="cloudPluginNegativeScenario" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

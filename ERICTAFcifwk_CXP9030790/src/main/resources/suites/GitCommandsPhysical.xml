@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GitCommandSuitePhysical">
+    <test name="GitCommandSuitePhysical" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.GitCommands">
+                <methods>
+                    <include name="checkGerrit" />
+                    <include name="checkRepoDirectories" />
+                    <include name="cloneRepo" />
+                    <!-- include name="setRepoSha" / -->
+                    <include name="addHookRepo" />
+                    <include name="createChange" />
+                    <include name="addChange" />
+                    <include name="commitChange" />
+                    <include name="pushForReview" />
+                    <include name="cleanClone" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

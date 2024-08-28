@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CloudPortal">
+    <test name="CloudPortal" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.cifwk.test.cases.CloudPortal">
+                <methods>
+                    <include name="verifyvAppCreation" />
+                    <include name="verifyvAppRecompose" />
+                    <include name="verifyVMPower"/>
+                    <include name="verifyVMresize" />
+                    <include name="verifyVMDelete" />
+                    <include name="vappShouldStopAsExpected" />
+                    <include name="vappShouldAddToCatalogAsExpected" />
+                    <include name="verifyvAppRemoval" />
+                    <include name="verifyvAppPowerOffAndDelete" />
+                    <include name="vappTemplateShouldDeleteAsExpected" />
+                    <include name="reportShouldGenerateAsExpected" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cloudPortal.rest.test.cases.TestGetRARestCommand">
+                <methods>
+                    <include name="verifyCloudPortalGetRARestFunctionality" />
+                    <include name="verifyCloudPortalGetDataCeneterRestFunctionality" />
+                    <include name="verifyCloudPortalGetEventsRestFunctionality" />
+                </methods>
+            </class>
+            <class name="com.ericsson.cloudPortal.ui.test.cases.TestCloudPortalUpdateDataCenterData">
+                <methods>
+                    <include name="testCloudPortalUpdateOrgsVDCWithRA" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

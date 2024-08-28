@@ -1,0 +1,6 @@
+id,description,host,command,args,expectedOut,expectedErr,expectedExit,timeout
+CIP-6572_Func_1.1,Create Drop,ciportal,manage.py,create_drop --product=test --releaseName=testrelname --planned=6 --actual=6 --dropName=1.0.6 --mediaFreeze=6 --systemInfo=AOM9999999_R9Z,OK,,0,5
+CIP-6572_Func_1.2,Test Package prim,ciportal,manage.py,cifwk_createpackage --name=ERICtestingprim_CXP9024165 --number=CXP9024165 --resp=signum,OK,,0,5
+CIP-6572_Func_1.3,Test Package Revision prim,ciportal,manage.py,cifwk_createpackagerevision --name=ERICtestingprim_CXP9024165 --number=CXP9024165 --ver=2.0.1 --groupid=a.test.package --type=rpm --mediaCategory=sw --mediaPath=None --product=test --intendedDrop=1.0.3 --autoDeliver=True,OK,,0,5
+CIP-6572_Func_1.4,Test Delivery of a Package ,ciportal,manage.py,cifwk_deliver --package=ERICtestingprim_CXP9024165 --packageVersion=2.0.1 --drop=1.0.6 --product=test --packageType=rpm,Delivery successful,,0,5
+CIP-6572_Func_1.5,create iso,ciportal,manage.py,cifwk_createisocontent --product=test --release=testrelname --drop=1.0.6 --ver=1.5.1 --artifactId=testma --groupId=com.a.b.c --releaseRepoName=releases --location=/tmp  ,lciadm100@,,0,20

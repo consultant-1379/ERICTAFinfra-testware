@@ -1,0 +1,2 @@
+id,description,testStep1,host,expectedResult,timeout
+CIP-6530_Func_1,Test the Test Report link on the product summary page,Test that Test Report Link is present on the product summary page of the CI-Portal,ciportal,Hello,10000

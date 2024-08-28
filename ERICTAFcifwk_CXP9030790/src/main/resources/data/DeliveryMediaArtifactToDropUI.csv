@@ -1,0 +1,6 @@
+id,description,host,username,password,product,productSet,rstate,email,drop,deliverDrop,expected,timeoutInMillis
+CIP-5011_Func_2.11,Deliver This - no email  - Failure ,ciportal,tafTest,tafTest123,test,psTest,R1A02,,1_0_1,1.0.2,Failure,40000
+CIP-5011_Func_2.12,Deliver This -  invalid email - Failure ,ciportal,tafTest,tafTest123,test,psTest,R1A02,wrong.email.format,1_0_1,1.0.2,Delivery Page,40000
+CIP-5011_Func_2.13,Deliver This - testma  - Sucessful,ciportal,tafTest,tafTest123,test,psTest,R1A01,lciadm100@cifwk.vts.com,1_0_1,1.0.1,Success,40000
+CIP-5011_Func_2.14,Deliver This - testma - Failure - Same Drop,ciportal,tafTest,tafTest123,test,psTest,R1A01,lciadm100@cifwk.vts.com,1_0_1,1.0.1,Failure,40000
+CIP-5011_Func_2.15,Deliver This - testma - Failure - Already in Baseline Drop,ciportal,tafTest,tafTest123,test,psTest,R1A01,lciadm100@cifwk.vts.com,1_0_1,1.0.2,Failure,40000

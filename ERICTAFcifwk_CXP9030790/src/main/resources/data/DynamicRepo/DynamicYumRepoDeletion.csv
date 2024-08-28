@@ -1,0 +1,2 @@
+hostname,deletePath,restParameters,timeout,deletehttpStatus
+ciportal,deleteRepo/,repo=,30,OK

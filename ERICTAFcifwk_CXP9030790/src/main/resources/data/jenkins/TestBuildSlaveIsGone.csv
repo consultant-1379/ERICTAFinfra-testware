@@ -1,0 +1,2 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsSlaveLabel,jenkinsJobName,jenkinsJobType,cloudCatalogName,timeoutVappTemplates,numRetries,retryTimeout,httpResponseVappTemplates,expectedVappTemplateStatus,expectedSlaveExists
+jenkins1,jenkins,Testing-TAF,testJenkinsJob1,lastBuild,CI-AXIS,50,3,120,OK,RESOLVED,false

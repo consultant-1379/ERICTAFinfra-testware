@@ -1,0 +1,2 @@
+vappName,datacenterName,httpResponseDatacenter,expectedDatacenter,httpResponseVapp,expectedVapp,httpResponseStop,expectedStop,timeoutStop,httpResponseStatus,expectedStatus,expectedPowerStatus,expectedvAppBecameBusy,cloudRestTimeout
+heartbeat_small_test_create,CI-AXIS,OK,OrgVdc,OK,vapps,OK,obj,600,OK,vapps,POWERED_OFF,true,5

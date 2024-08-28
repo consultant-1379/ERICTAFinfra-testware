@@ -1,0 +1,3 @@
+Id,Description,JenkinsHostName,JenkinsBaseDirectory,JenkinsJobName,Expected
+CIP-1718_Func_4.1,Delete kgb_auto_deliver jenkins job,jenkinsM1,jenkins,kgb_auto_deliver,"MOVED_TEMPORARILY,NOT_FOUND"
+CIP-1718_Func_4.2,Delete multi_kgb_auto_deliver jenkins job,jenkinsM1,jenkins,multi_kgb_auto_deliver,"MOVED_TEMPORARILY,NOT_FOUND"

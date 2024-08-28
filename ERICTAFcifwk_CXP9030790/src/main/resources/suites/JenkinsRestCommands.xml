@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestJenkinsRESTOperators">
+
+    <test name="TestJenkinsRESTOperators" preserve-order="true">
+        <classes>
+            <class
+                name="com.ericsson.cifwk.rest.test.cases.TestJenkinsRESTOperators">
+                <methods>
+                    <include name="testJenkinsSlavesExist" />
+                    <include name="testCreateJenkinsJob" />
+                    <include name="testCreateQueuedJenkinsJob" />
+                    <include name="testBuildJenkinsJob" />
+                    <include name="testQueuedItemCanBeRemoved" />
+                    <include name="testJenkinsJobStatus" />
+                    <include name="testGetJenkinsJobLog" />
+                    <include name="testBuildSlaveIsGoneFromJenkinsAndCloud" />
+                    <include name="testDeleteJenkinsJob" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

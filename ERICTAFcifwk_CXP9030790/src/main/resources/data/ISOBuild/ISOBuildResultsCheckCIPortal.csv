@@ -1,0 +1,10 @@
+hostname,command,args,expectedOutput,expected,timeout
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICsck_APR9010270-24.2.7.pkg,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestpkg1_CXP0000002-1.0.10.rpm,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestpkg2_CXP0000003-1.0.3.rpm,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestpkg4_CXP0000005-1.0.1.zip,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestpkg5_CXP0000006-1.0.1.pkg,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtorinst_CXP9023304-4.1.75.rpm,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestpkg3_CXP0000004-1.0.10.rpm,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestimage_CXP0000008-1.0.1.qcow2,TRUE,3
+ciportal,wget.nocheck,/test/1.0.4/mediaContent/testma/1.0.3/,ERICtestpkg6_CXP0000007-1.0.1.rpm,FALSE,3

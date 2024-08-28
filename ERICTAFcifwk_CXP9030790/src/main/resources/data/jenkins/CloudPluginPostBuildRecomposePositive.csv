@@ -1,0 +1,2 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsSlaveLabel,jenkinsJobName,jenkinsJobParameters,datacenterName,cloudAlive,cloudRecomposeSucceeds,expectedDatacenter,cloudRestTimeout,jenkinsRestTimeout,slaveOnlineTimeout,expectedSlaveOnline,expectedSlaveExistsJenkins,expectedSlaveExistsCloud,expectedJobResult,httpResponseDatacenter,httpResponseCloudVapp,vmsToRecompose,slaveList
+jenkinsM1,jenkins,Vapp-Plugin-RecomposePostBuild-Test,CloudPluginRecomposePostBuildStep,,Axis_OrgDC1,TRUE,TRUE,OrgVdc,50,5,1200000,TRUE,FALSE,FALSE,SUCCESS,OK,OK,"master_sc-1,master_sc-2",postRecompose

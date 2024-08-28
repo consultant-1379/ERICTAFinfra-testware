@@ -1,0 +1,17 @@
+VappName,VmName,DatacenterName,BaseUrl,RESTparameter,Value,HotAdd,PowerOffVm,ExpectedInitialVMStatus,ExpectedVMStatus,ExpectedHttpStatus,powerTimeout,expectedHttpPower,expectedVMBecameBusy,cloudRestTimeout
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,,yes,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,,no,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,3200,,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,8,,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,128,no,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,1152,yes,FALSE,POWERED_ON,POWERED_ON,OK,1000,OK,TRUE,90
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,512,yes,FALSE,POWERED_ON,POWERED_ON,OK,1000,BAD_REQUEST,TRUE,90
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,3200,yes,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,TRUE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,8,no,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,FALSE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,6,yes,FALSE,POWERED_ON,POWERED_ON,OK,1000,OK,TRUE,90
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,3,yes,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,TRUE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,17,yes,FALSE,POWERED_ON,POWERED_ON,OK,600,BAD_REQUEST,TRUE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,128,no,TRUE,POWERED_OFF,POWERED_OFF,OK,600,OK,TRUE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,5,no,FALSE,POWERED_OFF,POWERED_OFF,OK,600,OK,TRUE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_memory_internal_api,memory_mb,11520,yes,FALSE,POWERED_OFF,POWERED_OFF,OK,600,OK,TRUE,50
+spp_tc_positive,master_sfs,Axis_OrgDC1,resize_cpu_internal_api,cpu_count,1,yes,FALSE,POWERED_OFF,POWERED_OFF,OK,600,OK,TRUE,50

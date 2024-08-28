@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GenericRESTCommands">
+    <test name="GenericRESTCommand">
+        <classes>
+            <class name="com.ericsson.cifwk.scenarios.PortalRESTScenario">
+                <methods>
+                    <include name="genericPortalRESTScenario" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

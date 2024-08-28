@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CIPortalPerformance">
+  <test name="CIPortalPerformance">
+    <classes>
+      <class name="com.ericsson.cifwk.install.test.cases.ManagementCommands" >
+       <methods>
+         <include name="verifyManagePyFunctionality" />
+       </methods>
+      </class>
+      <class name="com.ericsson.cifwk.test.cases.Services">
+        <methods>
+          <include name="testMemcachedService"/>
+        </methods>
+      </class>
+      <class name="com.ericsson.cifwk.ui.test.cases.PerformanceUI" />
+      <class name="com.ericsson.cifwk.rest.test.cases.PerformanceRESTCommands" />
+    </classes>
+  </test>
+</suite>
+

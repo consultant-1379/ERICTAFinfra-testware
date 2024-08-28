@@ -1,0 +1,3 @@
+host,serverName,directory,command,assertValue,exitCode,timeout
+jenkinsM1,gerrit1,/tmp/ERICgamma,gerrit review --abandon ,true,0,30
+jenkinsM1,gerrit1,/tmp/ERICalpha,gerrit review --abandon ,true,0,30

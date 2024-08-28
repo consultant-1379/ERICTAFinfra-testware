@@ -1,0 +1,3 @@
+host,service,execute,expectedOut,assertValue,expectedExit,timeout
+gerritLocal,gerrit,stop,Stopping Gerrit Code Review: OK,true,0,30
+gerritLocal,gerrit,start,Starting Gerrit Code Review: OK,true,0,50

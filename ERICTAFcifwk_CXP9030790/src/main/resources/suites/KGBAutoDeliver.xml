@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="KGBAutoDeliver">
+  <test name="KGBAutoDeliver">
+    <classes>
+      <class name="com.ericsson.cifwk.install.test.cases.ManagementCommands" >
+       <methods>
+         <include name="verifyManagePyFunctionality" />
+       </methods>
+      </class>
+      <class name="com.ericsson.cifwk.test.cases.Services">
+        <methods>
+          <include name="testMessageBusServices"/>
+        </methods>
+      </class>
+      <class name="com.ericsson.cifwk.rest.test.cases.TestKGBAutoDeliverREST">
+        <methods>
+          <include name="testingAutoDeliverJenkinsJobCreate"/>
+          <include name="testingAutoDeliveryREST"/>
+          <include name="testingAutoDeliveryMultiREST"/>
+          <include name="testingAutoDeliverJenkinsJobDelete"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
+

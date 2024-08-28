@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DeleteCiFwkSuite" verbose="10">
+	<test name="DeleteCiFwkSuite">
+		<classes>
+			<class name="com.ericsson.cifwk.install.test.cases.DropCIFwkDB" />
+			<class name="com.ericsson.cifwk.install.test.cases.CleanUpCIFwkDir" />
+		</classes>
+	</test>
+</suite>

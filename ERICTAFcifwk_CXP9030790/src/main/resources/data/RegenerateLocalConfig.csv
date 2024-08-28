@@ -1,0 +1,2 @@
+localFile,localFileCopy,remoteFile,fileType,expectedOutFindReplaceInFile,expectedOutCopyLocalFileToRemote,expectedOutFileDeletedResult
+CifwkConfigFiles/localDjangoConfig.txt,localDjangoConfig.txt_copy,/home/lciadm100/.cifwk/config,.txt,TRUE,TRUE,TRUE

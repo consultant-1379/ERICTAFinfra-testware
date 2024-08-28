@@ -1,0 +1,2 @@
+id,description,host,localPom,remotePath,remotePom,group,artifact,version,drop,packaging,repo,mediaPath,mediaCategory,product,command,args,expectedOut1,expectedOut,expectedErr,expectedExit,timeout
+CIP-3456_Func_11,Add new artifact,ciportal,BuildPomFiles/isoBuild.pom,/tmp/testiso/,pom.xml,com.ericsson.cifwk,ERICtestpkg1_CXP0000002,1.0.1,latest.12A,rpm,releases,na,sw,test,manage.py,check_package_exists --name=ERICtestpkg1_CXP0000002 --repo=releases --group=com.ericsson.cifwk --ver=1.0.1 --category=sw --packaging=rpm --autoDrop=test:1.0.2,BUILD SUCCESS,OK,,0,3

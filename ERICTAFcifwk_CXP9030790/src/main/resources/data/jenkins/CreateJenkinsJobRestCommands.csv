@@ -1,0 +1,3 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsJobName,jenkinsJobConfigurationFile,Expected
+jenkins1,jenkins,testJenkinsJob1,JenkinsJobsConfigFiles/config.xml,OK
+jenkins1,jenkins,testJenkinsJob2,JenkinsJobsConfigFiles/echoHelloConfig.xml,OK

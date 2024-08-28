@@ -1,0 +1,2 @@
+restartHost,flushHost,serverName,directory,restartCommand,flushCommand,assertValue,exitCode,timeout
+gerritLocal,jenkinsM1,gerrit1,/export/data/gerrit/bin/,./gerrit.sh restart,gerrit flush-caches --all,true,0,30

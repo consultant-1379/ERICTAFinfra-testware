@@ -1,0 +1,7 @@
+jenkinsHostName,jenkinsBaseDirectory,jenkinsJobName,jenkinsStatusType,Expected,timeout
+jenkins1,jenkins,testJenkinsJob1,lastbuild,NOT_FOUND,60
+jenkins1,jenkins,testJenkinsJob1,lastBuild,OK,60
+jenkins1,jenkins,testJenkinsJob2,lastBuild,OK,180
+jenkins1,jenkins,testJenkinsJob2,lastUnsuccessfulBuild,NOT_FOUND,180
+jenkins1,jenkins,testJenkinsJob2,lastSuccessfulBuild,OK,180
+jenkins1,jenkins,testJenkinsJob3,lastSuccessfulBuild,NOT_FOUND,60

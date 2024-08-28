@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CheckCiFwkSuite" verbose="10">
+	<test name="CheckCiFwkSuite">
+		<classes>
+			<class name="com.ericsson.cifwk.tafscheduler.test.cases.demoCiFwk" />
+		</classes>
+	</test>
+</suite>

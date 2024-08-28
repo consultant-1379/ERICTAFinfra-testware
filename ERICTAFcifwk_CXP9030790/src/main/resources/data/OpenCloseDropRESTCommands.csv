@@ -1,0 +1,5 @@
+id,description,baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+CIP-8325_Func_1.1,Close The Drop,ciportal,/setDropStatus/,"product=test&drop=1.0.4&status=closed",POST,OK,Successfully set the drop status to closed for drop 1.0.4,TRUE
+CIP-8325_Func_1.2,Attempt Delivery into Closed Drop,ciportal,/deliverToDrop/,"drop=1.0.4&product=test&version=1.40.2&packageName=ERICdatapersist_CXP9030106&type=rpm&email=lciadm100@cifwk.vts.com",POST,OK,Attempt to deliver to drop that is not open,TRUE
+CIP-8325_Func_1.3,Open The Drop,ciportal,/setDropStatus/,"product=test&drop=1.0.4&status=open",POST,OK,Successfully set the drop status to open for drop 1.0.4,TRUE
+CIP-8325_Func_1.4,Attempt Delivery into Open Drop,ciportal,/deliverToDrop/,"drop=1.0.4&product=test&version=1.40.2&packageName=ERICdatapersist_CXP9030106&type=rpm&email=lciadm100@cifwk.vts.com",POST,OK,SUCCESS,TRUE

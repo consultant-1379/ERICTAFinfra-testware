@@ -1,0 +1,2 @@
+id,description,jenkinsHost,directory,jobName,configFile,jobParams,expectedCreateResponse,expectedBuildResponse,expectedDeleteResponse,timeout
+CIP-6530_Func_0,Create CDB Job,jenkinsM1,jenkins,CreateDummyCDB,JenkinsJobsConfigFiles/addDummyCDBTestReport.xml,"RESULT=SUCCESS,GROUP_ID=com.a.b.c,ARTIFACT_ID=testma,VERSION=1.0.1",OK,Created,Found,20

@@ -1,0 +1,5 @@
+baseUrl,path,restParameters,type,httpResponse,expectedOut,expected
+ciportal,/deliverToDrop/,drop=1.0.4&product=test&version=1.0.9&packageName=ERICtestpkg1_CXP0000002&email=lciadm100@cifwk.vts.com,POST,OK,SUCCESS,TRUE
+ciportal,/getDropContents/,"drop=1.0.4,product=test",GET,OK,ERICtestpkg1_CXP0000002-1.0.9.rpm,TRUE
+ciportal,/deliverToDrop/,drop=1.0.4&product=test&version=1.0.5&packageName=ERICtestpkg2_CXP0000003&email=lciadm100@cifwk.vts.com,POST,OK,SUCCESS,TRUE
+ciportal,/getDropContents/,"drop=1.0.4,product=test",GET,OK,ERICtestpkg2_CXP0000003-1.0.5.rpm,TRUE
